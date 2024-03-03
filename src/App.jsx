@@ -13,7 +13,7 @@ function App() {
   return (
     <ChakraProvider>
       <Flex height={"100vh"} backgroundPosition={"left bottom"} bgImage={bg} alignItems={"center"} justifyContent={"space-between"} flexDirection={"column"} overflowX={"hidden"} position={"relative"}>
-        <Flex width={"100%"} height={"15%"}>
+        <Flex width={"100%"} height={"15%"} justifyContent={"space-between"}>
           <motion.img
             src={fireball}
             style={{ margin: "1%", height: "50%" }}
@@ -21,7 +21,47 @@ function App() {
             animate={{ opacity: 1, rotate: 0, scale: 1 }}
             transition={{ duration: 1.5 }}
           />
-          <BurgerMenu />
+          <motion.div
+            style={{
+              display: 'flex',
+              width: '10.7%',
+              justifyContent:'space-between'
+            }}
+            transition={{delay:3.5, duration:1}}
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+          >
+            <Button
+              // style={{
+              //   fontSize: "15px",
+              //   color: "white",
+              //   border: "2.85px solid white",
+              //   padding: "8px 13px",
+              //   background: "rgba(0, 0, 0, 1)",
+              //   borderRadius: "999px",
+              //   cursor: "pointer",
+              //   width: buttonWidth, // Set the width of the button
+              //   marginRight: "-13px",
+              //   letterSpacing: "0.25em",
+              // }}
+              href='https://register.bits-spree.org/register'
+              fontSize='98.5%'
+              color='white'
+              border='3px solid white'
+              padding='0% 50%'
+              background='rgba(0, 0, 0, 1)'
+              cursor='pointer'
+              width='90%'
+              marginTop='12%'
+              marginLeft='-12rem'
+              borderRadius='9999px'
+              letterSpacing='0.3rem'
+
+            >
+              REGISTER
+            </Button>
+            <BurgerMenu />
+          </motion.div>
         </Flex>
         <Flex flexDirection={"column"} width={"100%"} alignItems={"center"} justifyContent={"center"}>
           <motion.img src={left} style={{ position: "absolute", left: "10%", width: "28%" }} initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0, transition: { delay: 3, duration: 1 } }} />
