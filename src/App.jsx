@@ -8,6 +8,7 @@ import right from "./assets/Right Side.png";
 import bg from "./assets/background.png";
 import insta from "./assets/insta.png";
 import { motion } from "framer-motion";
+import Countdown from "./components/Countdown";
 
 function App() {
   return (
@@ -93,6 +94,7 @@ function App() {
           <Text color={"#FEDF3E"} width={"17%"} fontSize={"xs"} marginRight={"2%"}>
             Embrace the challenge, rally for your convictions, and let the intensity of competition ignite the passion within.
           </Text>
+          <Countdown />
         </Flex>
       </Flex>
     </ChakraProvider>
