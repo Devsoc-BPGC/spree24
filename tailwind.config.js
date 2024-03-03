@@ -4,10 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-<<<<<<< Updated upstream
         Rampart: ["Inter", "cursive"],
-       }
-=======
         Tourney: ["Tourney", "sans-serif"],
         Alata: ["Alata"],
       },
@@ -16,7 +13,6 @@ export default {
         rred: "#BF3535",
         ggrey: "#E5E5E5",
       },
->>>>>>> Stashed changes
     },
   },
   plugins: [],

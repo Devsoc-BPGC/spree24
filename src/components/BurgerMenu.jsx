@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Button, Icon } from '@chakra-ui/react';
-import navLogo from '../assets/navbar.png'
-import './menu.css'
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button, Icon } from "@chakra-ui/react";
+import navLogo from "../assets/navbar.png";
+import "./menu.css";
 const BurgerMenu = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
@@ -15,7 +15,7 @@ const BurgerMenu = () => {
       {/* Burger Icon */}
       <Button
         className="fixed top-4 z-50 p-2 text-white bg-gray-800 rounded-md focus:outline-none"
-        style={{backgroundColor:'transparent',backgroundSize:'cover'}}
+        style={{ backgroundColor: "transparent", backgroundSize: "cover" }}
         onClick={toggleMenu}
         backgroundImage={navLogo}
         _hover={{ bg: "teal.600" }}
@@ -66,9 +66,9 @@ const BurgerMenu = () => {
         {isMenuOpen && (
           <motion.div
             className="fixed inset-y-0 right-0 w-1/3 h-full p-4 flex justify-start items-center"
-            initial={{ x: '100%' }}
+            initial={{ x: "100%" }}
             animate={{ x: 0 }}
-            exit={{ x: '100%' }}
+            exit={{ x: "100%" }}
           >
             {/* Content */}
             <ul className="space-y-10 text-center p-8 text-4xl md:text-7xl font-Inter text-white">
