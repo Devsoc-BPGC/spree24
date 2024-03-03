@@ -24,13 +24,13 @@ function App() {
           />
           <motion.div
             style={{
-              display: 'flex',
-              width: '10.7%',
-              justifyContent:'space-between'
+              display: "flex",
+              width: "10.7%",
+              justifyContent: "space-between",
             }}
-            transition={{delay:3.5, duration:1}}
-            initial={{opacity:0}}
-            animate={{opacity:1}}
+            transition={{ delay: 4, duration: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
           >
             <Button
               // style={{
@@ -45,19 +45,18 @@ function App() {
               //   marginRight: "-13px",
               //   letterSpacing: "0.25em",
               // }}
-              href='https://register.bits-spree.org/register'
-              fontSize='98.5%'
-              color='white'
-              border='3px solid white'
-              padding='0% 50%'
-              background='rgba(0, 0, 0, 1)'
-              cursor='pointer'
-              width='90%'
-              marginTop='12%'
-              marginLeft='-12rem'
-              borderRadius='9999px'
-              letterSpacing='0.3rem'
-
+              href="https://register.bits-spree.org/register"
+              fontSize="98.5%"
+              color="white"
+              border="3px solid white"
+              padding="0% 50%"
+              background="rgba(0, 0, 0, 1)"
+              cursor="pointer"
+              width="90%"
+              marginTop="12%"
+              marginLeft="-12rem"
+              borderRadius="9999px"
+              letterSpacing="0.3rem"
             >
               REGISTER
             </Button>
@@ -130,10 +129,15 @@ function App() {
           </Flex>
         </Flex>
         <Flex width={"100%"} alignItems={"center"} justifyContent={"end"} height={"15%"} flexDir={"row-reverse"}>
-          <Button backgroundImage={insta} _hover={{}} _active={{}} width={"12%"} backgroundSize={"cover"} height={"50%"} />
-          <Text color={"#FEDF3E"} width={"17%"} fontSize={"xs"} marginRight={"2%"}>
+          <motion.div style={{ width: "12%", display: "flex", height: "100%", alignItems: "center" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 5, duration: 0.5 }}>
+            <Button backgroundImage={insta} _hover={{}} _active={{}} width={"100%"} backgroundSize={"cover"} height={"50%"} />
+          </motion.div>
+          <motion.p style={{ color: "#FEDF3E", width: "17%", fontSize: "small", marginRight: "2%" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 4.5, duration: 0.5 }}>
             Embrace the challenge, rally for your convictions, and let the intensity of competition ignite the passion within.
-          </Text>
+          </motion.p>
+          {/* <Text color={"#FEDF3E"} width={"17%"} fontSize={"xs"} marginRight={"2%"}>
+            Embrace the challenge, rally for your convictions, and let the intensity of competition ignite the passion within.
+          </Text> */}
           <Countdown />
         </Flex>
       </Flex>

@@ -1,6 +1,7 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { differenceInDays, differenceInHours, differenceInMinutes } from "date-fns";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Countdown = () => {
   const eventDate = new Date("2024 March 29 00:00:00");
@@ -24,7 +25,8 @@ const Countdown = () => {
     return null;
   }
   return (
-    <Flex textAlign={"center"} flex={2}>
+    // <Flex textAlign={"center"} flex={2}>
+    <motion.div style={{ display: "flex", flex: 2, textAlign: "center" }} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 4, duration: 1 } }}>
       <Flex flexDirection={"column"} paddingLeft={"3%"} paddingRight={"3%"}>
         <Text fontSize={"sm"} fontWeight={"semibold"} marginBottom={"-20%"}>
           Days
@@ -51,8 +53,11 @@ const Countdown = () => {
           {differenceInMinutes(eventDate, date) % 60 <= 9 ? "0" + (differenceInMinutes(eventDate, date) % 60) : differenceInMinutes(eventDate, date) % 60}
         </Text>
       </Flex>
-    </Flex>
+    </motion.div>
   );
+  {
+    /* </Flex> */
+  }
 };
 
 export default Countdown;
