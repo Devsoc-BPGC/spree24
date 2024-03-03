@@ -9,11 +9,29 @@ import bg from "./assets/background.png";
 import insta from "./assets/insta.png";
 import { motion } from "framer-motion";
 import Countdown from "./components/Countdown";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  Link,
+} from "react-router-dom";
+import Register from "./pages/Register.jsx";
 
-function App() {
+function HomePage() {
+  const handleRegister = () => {};
   return (
     <ChakraProvider>
-      <Flex height={"100vh"} backgroundPosition={"left bottom"} bgImage={bg} alignItems={"center"} justifyContent={"space-between"} flexDirection={"column"} overflowX={"hidden"} position={"relative"}>
+      <Flex
+        height={"100vh"}
+        backgroundPosition={"left bottom"}
+        bgImage={bg}
+        alignItems={"center"}
+        justifyContent={"space-between"}
+        flexDirection={"column"}
+        overflowX={"hidden"}
+        position={"relative"}
+      >
         <Flex width={"100%"} height={"15%"} justifyContent={"space-between"}>
           <motion.img
             src={fireball}
@@ -45,7 +63,8 @@ function App() {
               //   marginRight: "-13px",
               //   letterSpacing: "0.25em",
               // }}
-              href="https://register.bits-spree.org/register"
+              as={Link}
+              to="/register"
               fontSize="98.5%"
               color="white"
               border="3px solid white"
@@ -57,24 +76,67 @@ function App() {
               marginLeft="-12rem"
               borderRadius="9999px"
               letterSpacing="0.3rem"
+              onClick={handleRegister}
             >
               REGISTER
             </Button>
             <BurgerMenu />
           </motion.div>
         </Flex>
-        <Flex flexDirection={"column"} width={"100%"} alignItems={"center"} justifyContent={"center"}>
-          <motion.img src={left} style={{ position: "absolute", left: "10%", width: "28%" }} initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0, transition: { delay: 3, duration: 1 } }} />
-          <motion.img src={Player} style={{ width: "35%", marginLeft: "-20%", position: "absolute", zIndex: 2 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2 }} />
+        <Flex
+          flexDirection={"column"}
+          width={"100%"}
+          alignItems={"center"}
+          justifyContent={"center"}
+        >
+          <motion.img
+            src={left}
+            style={{ position: "absolute", left: "10%", width: "28%" }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 3, duration: 1 },
+            }}
+          />
+          <motion.img
+            src={Player}
+            style={{
+              width: "35%",
+              marginLeft: "-20%",
+              position: "absolute",
+              zIndex: 2,
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+          />
           <motion.img
             src={right}
-            style={{ position: "absolute", right: 0, width: "17%", marginTop: "2%" }}
+            style={{
+              position: "absolute",
+              right: 0,
+              width: "17%",
+              marginTop: "2%",
+            }}
             initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0, transition: { delay: 3, duration: 1 } }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 3, duration: 1 },
+            }}
           />
           <Flex flexDirection={"column"} width={"100%"} alignItems={"center"}>
             <motion.div
-              style={{ width: "80%", justifyContent: "space-between", color: "white", marginBottom: "-2%", zIndex: 1, display: "flex", flexDirection: "row-reverse" }}
+              style={{
+                width: "80%",
+                justifyContent: "space-between",
+                color: "white",
+                marginBottom: "-2%",
+                zIndex: 1,
+                display: "flex",
+                flexDirection: "row-reverse",
+              }}
               initial="hidden"
               animate="visible"
               variants={{
@@ -95,8 +157,23 @@ function App() {
                     <motion.p
                       className="spree-letters"
                       key={index}
-                      style={{ fontWeight: 700, fontSize: "9rem", fontFamily: "Inter" }}
-                      variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5, type: "spring", stiffness: 100 } } }}
+                      style={{
+                        fontWeight: 700,
+                        fontSize: "9rem",
+                        fontFamily: "Inter",
+                      }}
+                      variants={{
+                        hidden: { opacity: 0, x: -30 },
+                        visible: {
+                          opacity: 1,
+                          x: 0,
+                          transition: {
+                            duration: 0.5,
+                            type: "spring",
+                            stiffness: 100,
+                          },
+                        },
+                      }}
                     >
                       {item}
                     </motion.p>
@@ -104,7 +181,13 @@ function App() {
                 })}
             </motion.div>
             <motion.div
-              style={{ display: "flex", width: "80%", textAlign: "right", zIndex: 1, justifyContent: "end" }}
+              style={{
+                display: "flex",
+                width: "80%",
+                textAlign: "right",
+                zIndex: 1,
+                justifyContent: "end",
+              }}
               initial="hidden"
               animate="visible"
               variants={{
@@ -120,7 +203,14 @@ function App() {
             >
               {Array.from("SHOWDOWN OF THE ACES").map((item, index) => {
                 return (
-                  <motion.span key={index} style={{ color: "white", fontSize: "1.7rem" }} variants={{ hidden: { opacity: 0, x: 10 }, visible: { opacity: 1, x: 0 } }}>
+                  <motion.span
+                    key={index}
+                    style={{ color: "white", fontSize: "1.7rem" }}
+                    variants={{
+                      hidden: { opacity: 0, x: 10 },
+                      visible: { opacity: 1, x: 0 },
+                    }}
+                  >
                     {item === " " ? "\u00A0" : item}
                   </motion.span>
                 );
@@ -128,12 +218,46 @@ function App() {
             </motion.div>
           </Flex>
         </Flex>
-        <Flex width={"100%"} alignItems={"center"} justifyContent={"end"} height={"15%"} flexDir={"row-reverse"}>
-          <motion.div style={{ width: "12%", display: "flex", height: "100%", alignItems: "center" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 5, duration: 0.5 }}>
-            <Button backgroundImage={insta} _hover={{}} _active={{}} width={"100%"} backgroundSize={"cover"} height={"50%"} />
+        <Flex
+          width={"100%"}
+          alignItems={"center"}
+          justifyContent={"end"}
+          height={"15%"}
+          flexDir={"row-reverse"}
+        >
+          <motion.div
+            style={{
+              width: "12%",
+              display: "flex",
+              height: "100%",
+              alignItems: "center",
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 5, duration: 0.5 }}
+          >
+            <Button
+              backgroundImage={insta}
+              _hover={{}}
+              _active={{}}
+              width={"100%"}
+              backgroundSize={"cover"}
+              height={"50%"}
+            />
           </motion.div>
-          <motion.p style={{ color: "#FEDF3E", width: "17%", fontSize: "small", marginRight: "2%" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 4.5, duration: 0.5 }}>
-            Embrace the challenge, rally for your convictions, and let the intensity of competition ignite the passion within.
+          <motion.p
+            style={{
+              color: "#FEDF3E",
+              width: "17%",
+              fontSize: "small",
+              marginRight: "2%",
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 4.5, duration: 0.5 }}
+          >
+            Embrace the challenge, rally for your convictions, and let the
+            intensity of competition ignite the passion within.
           </motion.p>
           {/* <Text color={"#FEDF3E"} width={"17%"} fontSize={"xs"} marginRight={"2%"}>
             Embrace the challenge, rally for your convictions, and let the intensity of competition ignite the passion within.
@@ -144,5 +268,17 @@ function App() {
     </ChakraProvider>
   );
 }
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;

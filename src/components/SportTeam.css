@@ -1,0 +1,17 @@
+.sync {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  justify-content: center;
+}
+
+.add {
+  margin-left: 30vw;
+  margin-top: 1rem;
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
