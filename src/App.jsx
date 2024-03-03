@@ -1,6 +1,6 @@
 import "./index.css";
 import BurgerMenu from "./components/BurgerMenu";
-import { Button, ChakraProvider, Flex, Image, Text } from "@chakra-ui/react";
+import { Button, ChakraProvider, Flex } from "@chakra-ui/react";
 import Player from "./assets/Player.png";
 import fireball from "./assets/fireball2.png";
 import left from "./assets/Left Side.png";
