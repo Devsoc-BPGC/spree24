@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button, Icon } from '@chakra-ui/react';
+import navLogo from '../assets/navbar.png'
 import './menu.css'
 const BurgerMenu = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -10,11 +11,14 @@ const BurgerMenu = () => {
   };
 
   return (
-    <div className="fixed top-4 right-4">
+    <div className="fixed top-4 right-4 z-50">
       {/* Burger Icon */}
       <Button
         className="fixed top-4 z-50 p-2 text-white bg-gray-800 rounded-md focus:outline-none"
+        style={{backgroundColor:'transparent',backgroundSize:'cover'}}
         onClick={toggleMenu}
+        backgroundImage={navLogo}
+        _hover={{ bg: "teal.600" }}
       >
         {isMenuOpen ? (
           // Cross Icon when the menu is open
@@ -61,7 +65,7 @@ const BurgerMenu = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="fixed inset-y-0 right-0 w-1/3 h-full p-4 bg-black flex justify-start items-center"
+            className="fixed inset-y-0 right-0 w-1/3 h-full p-4 flex justify-start items-center"
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
