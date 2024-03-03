@@ -55,9 +55,9 @@ const Countdown = () => {
       </Flex>
     </motion.div>
   );
-  {
-    /* </Flex> */
-  }
+  // {
+  //   /* </Flex> */
+  // }
 };
 
 export default Countdown;
