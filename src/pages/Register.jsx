@@ -5,6 +5,7 @@ import ModeSelector from "../components/ModeSelector";
 import Form from "../components/Form";
 import SportIndividual from "../components/SportIndividual";
 import SportTeam from "../components/SportTeam";
+import { Link } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("individual");
@@ -41,7 +42,7 @@ function App() {
   return (
     <div className="min-h-screen min-w-full bg-[url('./assets/bg_reg.png')] bg-no-repeat bg-cover bg-center flex justify-evenly items-center flex-col">
       <div className="flex justify-evenly items-center lg:min-w-[80vw] lg:max-w-[80vw] flex-col  min-h-full">
-        <div className="lg:rounded-3xl flex items-center flex-col bg-black bg-opacity-60 w-full">
+        <div className="lg:rounded-3xl flex items-center flex-col bg-black bg-opacity-65 w-full">
           <div className="flex justify-evenly items-center w-4/5 lg:w-[100%]">
             <div className="py-6">
               <RegTitle />
@@ -83,7 +84,7 @@ function App() {
             )}
           </div>
           <div className="flex justify-start lg:flex-row flex-col items-center w-full lg:mb-4 mb-2 lg:w-4/5">
-            <div className="lg:w-5/12 flex mt-4 justify-center items-center">
+            <div className="lg:w-auto w-full lg:gap-8 flex relative mt-4 justify-evenly flex-row">
               <button
                 className="border-white border-2 mt-4 lg:mt-0 hover:bg-rred duration-300 active:bg-red-300 focus:outline-none rounded-lg text-white text-2xl px-5 py-2 font-Tourney font-black transition-colors"
                 onClick={() => {
@@ -104,6 +105,11 @@ function App() {
               >
                 REGISTER
               </button>
+              <Link to="/">
+                <button className="border-white mt-4 lg:mt-0 flex border-2 hover:bg-rred duration-300 active:bg-red-300 focus:outline-none rounded-lg text-white text-2xl  px-5 py-2 font-Tourney font-black transition-colors">
+                  HOME PAGE
+                </button>
+              </Link>
             </div>
             <div className="mt-4 flex w-full flex-wrap lg:w-auto relative justify-evenly flex-row items-center lg:absolute lg:right-0 lg:mr-[17%] lg:gap-8">
               <button className="border-white flex border-2 hover:bg-rred duration-300 active:bg-red-300 focus:outline-none rounded-lg text-white text-2xl px-5 py-2 font-Tourney font-black transition-colors">
