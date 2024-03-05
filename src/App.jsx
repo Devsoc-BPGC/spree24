@@ -260,7 +260,7 @@ function HomePage() {
                   transition={{ delay: 5, duration: 0.5 }}
                 >
                   <Show above="md">
-                    <Button backgroundImage={insta} _hover={{}} _active={{}} width={"100%"} backgroundSize={"cover"} height={"50%"} />
+                    <Button as={Link} to={"https://www.instagram.com/bitsspree/"} backgroundImage={insta} backgroundColor={"transparent"} _hover={{}} _active={{}} width={"30%"} backgroundSize={"cover"} height={"50%"} />
                   </Show>
                 </motion.div>
                 <Show above="md">
