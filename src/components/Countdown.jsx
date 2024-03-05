@@ -26,7 +26,12 @@ const Countdown = () => {
   }
   return (
     // <Flex textAlign={"center"} flex={2}>
-    <motion.div style={{ display: "flex", flex: 2, textAlign: "center" }} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 4, duration: 1 } }}>
+    <motion.div
+      className="justify-center sm:justify-start"
+      style={{ display: "flex", flex: 2, textAlign: "center" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 4, duration: 1 } }}
+    >
       <Flex flexDirection={"column"} paddingLeft={"3%"} paddingRight={"3%"}>
         <Text fontSize={"sm"} fontWeight={"semibold"} marginBottom={"-20%"}>
           Days
