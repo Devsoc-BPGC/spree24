@@ -10,7 +10,14 @@ import phonebg from "./assets/phone_bg2.jpeg";
 import insta from "./assets/insta.png";
 import { motion, AnimatePresence } from "framer-motion";
 import Countdown from "./components/Countdown";
-import { BrowserRouter as Router, Routes, Route, Navigate, Link } from "react-router-dom";
+import Footer from "./components/Footer.jsx";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  Link,
+} from "react-router-dom";
 import Register from "./pages/Register.jsx";
 import { useState } from "react";
 
@@ -21,7 +28,12 @@ function HomePage() {
     <ChakraProvider>
       <Flex
         height={"100vh"}
-        backgroundPosition={{ base: "right bottom", sm: "20% bottom", md: "20% bottom", lg: "left bottom" }}
+        backgroundPosition={{
+          base: "right bottom",
+          sm: "20% bottom",
+          md: "20% bottom",
+          lg: "left bottom",
+        }}
         bgSize={"cover"}
         bgImage={{ base: phonebg, sm: bg }}
         alignItems={"center"}
@@ -71,7 +83,12 @@ function HomePage() {
           </motion.div>
           <BurgerMenu isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
         </Flex>
-        <Flex flexDirection={"column"} width={"100%"} alignItems={"center"} justifyContent={"center"}>
+        <Flex
+          flexDirection={"column"}
+          width={"100%"}
+          alignItems={"center"}
+          justifyContent={"center"}
+        >
           <AnimatePresence>
             {!isMenuOpen && (
               <motion.img
@@ -99,7 +116,20 @@ function HomePage() {
             }}
             initial={{ opacity: 0, x: 0, left: "auto" }}
             // exit={{ x: -100 }}
-            animate={!isMenuOpen ? { opacity: 1, x: 0, transition: { duration: 2 }, left: "auto" } : { left: "20%", opacity: 1, transition: { delay: 2, duration: 0.5 } }}
+            animate={
+              !isMenuOpen
+                ? {
+                    opacity: 1,
+                    x: 0,
+                    transition: { duration: 2 },
+                    left: "auto",
+                  }
+                : {
+                    left: "20%",
+                    opacity: 1,
+                    transition: { delay: 2, duration: 0.5 },
+                  }
+            }
             // transition={{ duration: 2 }}
           />
           <AnimatePresence>
@@ -239,7 +269,13 @@ function HomePage() {
             </AnimatePresence>
           </Flex>
         </Flex>
-        <Flex width={"100%"} alignItems={"center"} justifyContent={"end"} height={"15%"} flexDir={{ base: "column", md: "row-reverse" }}>
+        <Flex
+          width={"100%"}
+          alignItems={"center"}
+          justifyContent={"end"}
+          height={"15%"}
+          flexDir={{ base: "column", md: "row-reverse" }}
+        >
           {!isMenuOpen ? (
             <Show above="md">
               <motion.div
@@ -254,7 +290,14 @@ function HomePage() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 5, duration: 0.5 }}
               >
-                <Button backgroundImage={insta} _hover={{}} _active={{}} width={"100%"} backgroundSize={"cover"} height={"50%"} />
+                <Button
+                  backgroundImage={insta}
+                  _hover={{}}
+                  _active={{}}
+                  width={"100%"}
+                  backgroundSize={"cover"}
+                  height={"50%"}
+                />
               </motion.div>
               <motion.p
                 style={{
@@ -268,14 +311,21 @@ function HomePage() {
                 exit={{ opacity: 0 }}
                 transition={{ delay: 4.5, duration: 0.5 }}
               >
-                Embrace the challenge, rally for your convictions, and let the intensity of competition ignite the passion within.
+                Embrace the challenge, rally for your convictions, and let the
+                intensity of competition ignite the passion within.
               </motion.p>
             </Show>
           ) : (
             <Show above="md">
-              <motion.div style={{ width: "40%", color: "white" }} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}>
+              <motion.div
+                style={{ width: "40%", color: "white" }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}
+              >
                 <Text fontSize={"xs"}>
-                  &quot;You, me or nobody is gonna hit as hard as life. But it ain&apos;t about how hard you hit. It&apos;s about how hard you can get hit... and keep moving forward.&quot;
+                  &quot;You, me or nobody is gonna hit as hard as life. But it
+                  ain&apos;t about how hard you hit. It&apos;s about how hard
+                  you can get hit... and keep moving forward.&quot;
                 </Text>
                 <Text fontSize={"xs"}>-Rocky (2006 Movie)</Text>
               </motion.div>
@@ -305,6 +355,7 @@ function HomePage() {
           <Countdown />
         </Flex>
       </Flex>
+      <Footer />
     </ChakraProvider>
   );
 }
