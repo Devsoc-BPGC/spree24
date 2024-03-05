@@ -10,6 +10,7 @@ import phonebg from "./assets/phone_bg2.jpeg";
 import insta from "./assets/insta.png";
 import { motion, AnimatePresence } from "framer-motion";
 import Countdown from "./components/Countdown";
+import Footer from "./components/Footer.jsx";
 import { BrowserRouter as Router, Routes, Route, Navigate, Link } from "react-router-dom";
 import Register from "./pages/Register.jsx";
 import { useState } from "react";
@@ -21,7 +22,12 @@ function HomePage() {
     <ChakraProvider>
       <Flex
         height={"100vh"}
-        backgroundPosition={{ base: "right bottom", sm: "20% bottom", md: "20% bottom", lg: "left bottom" }}
+        backgroundPosition={{
+          base: "right bottom",
+          sm: "20% bottom",
+          md: "20% bottom",
+          lg: "left bottom",
+        }}
         bgSize={"cover"}
         bgImage={{ base: phonebg, sm: bg }}
         alignItems={"center"}
@@ -306,6 +312,7 @@ function HomePage() {
           </Flex>
         </motion.div>
       </Flex>
+      <Footer />
     </ChakraProvider>
   );
 }
