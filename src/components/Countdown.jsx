@@ -46,7 +46,7 @@ const Countdown = () => {
           Hours
         </Text>
         <Text fontSize={{ base: "4xl", md: "5xl" }} fontWeight={"semibold"}>
-          {differenceInHours(eventDate, date) % 60 <= 9 ? "0" + (differenceInHours(eventDate, date) % 60) : differenceInHours(eventDate, date) % 60}
+          {differenceInHours(eventDate, date) % 24 <= 9 ? "0" + (differenceInHours(eventDate, date) % 60) : differenceInHours(eventDate, date) % 24}
         </Text>
       </Flex>
       <Text fontSize={{ base: "2.5rem", md: "3.5rem" }}>:</Text>
