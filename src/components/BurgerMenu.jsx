@@ -14,6 +14,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
   };
 
   return (
+    <>
     <div className="fixed top-4 right-4 z-50">
       {/* Burger Icon */}
       <Button
@@ -40,51 +41,53 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
           </motion.div>
         )}
       </Button>
-
-      {/* Modal */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            className="inset-y-0 right-0 w-1/3 h-4/5 p-4 flex justify-start items-center pt-12"
-            initial={{ x: "100%" }}
-            animate={{ x: 0, transition: { delay: 2, duration: 0.5 } }}
-            exit={{ x: "100%", transition: { duration: 0.5, delay: 1 } }}
-          >
-            {/* Content */}
-            <ul className="space-y-5 md:space-y-10 text-center p-8 text-4xl md:text-4xl font-Inter text-white pt-12">
-              <motion.li initial={{ x: 20, opacity: 0 }} exit={{ x: 20, opacity: 0, transition: { duration: 0.3 } }} animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 2.5 } }}>
-                <a href="#about-us" className="text-white-800 hover:text-white-600 relative">
-                  ABOUT US
-                  <span className="underline"></span>
-                </a>
-              </motion.li>
-              <motion.li initial={{ opacity: 0, x: 20 }} exit={{ x: 20, opacity: 0, transition: { duration: 0.3, delay: 0.1 } }} animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 3 } }}>
-                <a href="#events" className="text-white-800 hover:text-white-600 relative">
-                  EVENTS
-                  <span className="underline"></span>
-                </a>
-              </motion.li>
-              <motion.li
-                initial={{ opacity: 0, x: 20 }}
-                exit={{ x: 20, opacity: 0, transition: { duration: 0.3, delay: 0.2 } }}
-                animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 3.5 } }}
-              >
-                <a href="#gallery" className="text-white-800 hover:text-white-600 relative">
-                  GALLERY
-                  <span className="underline"></span>
-                </a>
-              </motion.li>
-              <motion.li initial={{ opacity: 0, x: 20 }} exit={{ x: 20, opacity: 0, transition: { duration: 0.3, delay: 0.3 } }} animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 4 } }}>
-                <a href="#developers" className="text-white-800 hover:text-white-600 relative">
-                  DEVELOPERS
-                  <span className="underline"></span>
-                </a>
-              </motion.li>
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
+     {/* Modal */}
+     <div className="fixed top-20 right-1 z-50">     <AnimatePresence>
+     {isMenuOpen && (
+       <motion.div
+         className="inset-y-0 right-0 w-1/3 h-4/5 p-1 flex justify-start items-center pt-12"
+         initial={{ x: "100%" }}
+         animate={{ x: 0, transition: { delay: 2, duration: 0.5 } }}
+         exit={{ x: "100%", transition: { duration: 0.5, delay: 1 } }}
+       >
+         {/* Content */}
+         <ul className="space-y-5 sm:space-y-10 md:space-y-10 text-center p-4 text-xl sm:text-4xl md:text-4xl font-Inter text-white pt-12 font-bold">
+           <motion.li initial={{ x: 20, opacity: 0 }} exit={{ x: 20, opacity: 0, transition: { duration: 0.3 } }} animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 2.5 } }}>
+             <a href="#about-us" className="text-white-800 hover:text-white-600 relative">
+               ABOUT US
+               <span className="underline"></span>
+             </a>
+           </motion.li>
+           <motion.li initial={{ opacity: 0, x: 20 }} exit={{ x: 20, opacity: 0, transition: { duration: 0.3, delay: 0.1 } }} animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 3 } }}>
+             <a href="#events" className="text-white-800 hover:text-white-600 relative">
+               EVENTS
+               <span className="underline"></span>
+             </a>
+           </motion.li>
+           <motion.li
+             initial={{ opacity: 0, x: 20 }}
+             exit={{ x: 20, opacity: 0, transition: { duration: 0.3, delay: 0.2 } }}
+             animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 3.5 } }}
+           >
+             <a href="#gallery" className="text-white-800 hover:text-white-600 relative">
+               GALLERY
+               <span className="underline"></span>
+             </a>
+           </motion.li>
+           <motion.li initial={{ opacity: 0, x: 20 }} exit={{ x: 20, opacity: 0, transition: { duration: 0.3, delay: 0.3 } }} animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 4 } }}>
+             <a href="#developers" className="text-white-800 hover:text-white-600 relative">
+               DEVELOPERS
+               <span className="underline"></span>
+             </a>
+           </motion.li>
+         </ul>
+       </motion.div>
+     )}
+   </AnimatePresence>
+   </div>
+
+   </>
   );
 };
 
