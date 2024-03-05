@@ -217,7 +217,7 @@ function HomePage() {
                       },
                     }}
                   >
-                    {Array.from("SHOWDOWN OF THE ACES").map((item, index) => {
+                    {Array.from("SHOWDOWN OF ACES").map((item, index) => {
                       return (
                         <motion.span
                           key={index}
