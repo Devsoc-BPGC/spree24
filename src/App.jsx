@@ -11,6 +11,7 @@ import insta from "./assets/insta.png";
 import { motion, AnimatePresence } from "framer-motion";
 import Countdown from "./components/Countdown";
 import Footer from "./components/Footer.jsx";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -20,6 +21,7 @@ import {
 } from "react-router-dom";
 import Register from "./pages/Register.jsx";
 import { useState } from "react";
+import VerticalNav from "./components/VerticalNav.jsx";
 
 function HomePage() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -60,6 +62,7 @@ function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
+            <VerticalNav/>
             <Show above="sm">
               <Button
                 as={Link}
