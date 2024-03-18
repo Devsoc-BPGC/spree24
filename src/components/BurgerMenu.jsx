@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Button, Icon } from "@chakra-ui/react";
+import { Button, Icon,useMediaQuery } from "@chakra-ui/react";
 import navLogo from "../assets/navbar.png";
 import "./menu.css";
 import PropTypes from "prop-types";
@@ -12,6 +12,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
+  const [isLargerThan800] = useMediaQuery('(min-width: 800px)')
 
   return (
     <>
@@ -55,13 +56,13 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
          <ul className="space-y-5 sm:space-y-10 md:space-y-10 text-center p-4 text-xl sm:text-4xl md:text-4xl font-Inter text-white pt-12 font-bold">
            <motion.li initial={{ x: 20, opacity: 0 }} exit={{ x: 20, opacity: 0, transition: { duration: 0.3 } }} animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 2.5 } }}>
              <a href="#about-us" className="text-white-800 hover:text-white-600 relative">
-               ABOUT US
+               About Us
                <span className="underline"></span>
              </a>
            </motion.li>
            <motion.li initial={{ opacity: 0, x: 20 }} exit={{ x: 20, opacity: 0, transition: { duration: 0.3, delay: 0.1 } }} animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 3 } }}>
              <a href="#events" className="text-white-800 hover:text-white-600 relative">
-               EVENTS
+               Events
                <span className="underline"></span>
              </a>
            </motion.li>
@@ -71,16 +72,42 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
              animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 3.5 } }}
            >
              <a href="#gallery" className="text-white-800 hover:text-white-600 relative">
-               GALLERY
+               Gallery
                <span className="underline"></span>
              </a>
            </motion.li>
            <motion.li initial={{ opacity: 0, x: 20 }} exit={{ x: 20, opacity: 0, transition: { duration: 0.3, delay: 0.3 } }} animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 4 } }}>
              <a href="#developers" className="text-white-800 hover:text-white-600 relative">
-               DEVELOPERS
+               Developers
                <span className="underline"></span>
              </a>
            </motion.li>
+           {isLargerThan800 ? <></> : <>
+           <motion.li initial={{ opacity: 0, x: 20 }} exit={{ x: 20, opacity: 0, transition: { duration: 0.3, delay: 0.3 } }} animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 4 } }}>
+             <a href="#media" className="text-white-800 hover:text-white-600 relative">
+               Media Partner
+               <span className="underline"></span>
+             </a>
+           </motion.li>
+           <motion.li initial={{ opacity: 0, x: 20 }} exit={{ x: 20, opacity: 0, transition: { duration: 0.3, delay: 0.3 } }} animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 4 } }}>
+             <a href="#sponsor" className="text-white-800 hover:text-white-600 relative">
+               Sponsor
+               <span className="underline"></span>
+             </a>
+           </motion.li>
+           <motion.li initial={{ opacity: 0, x: 20 }} exit={{ x: 20, opacity: 0, transition: { duration: 0.3, delay: 0.3 } }} animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 4 } }}>
+             <a href="#team" className="text-white-800 hover:text-white-600 relative">
+               Our Team
+               <span className="underline"></span>
+             </a>
+           </motion.li>
+           <motion.li initial={{ opacity: 0, x: 20 }} exit={{ x: 20, opacity: 0, transition: { duration: 0.3, delay: 0.3 } }} animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 4 } }}>
+             <a href="#media" className="text-white-800 hover:text-white-600 relative">
+               Contact Us
+               <span className="underline"></span>
+             </a>
+           </motion.li>
+           </>}
          </ul>
        </motion.div>
      )}

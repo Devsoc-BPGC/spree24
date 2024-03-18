@@ -1,6 +1,6 @@
 import "./index.css";
 import BurgerMenu from "./components/BurgerMenu";
-import { Button, ChakraProvider, Flex, Show, Text } from "@chakra-ui/react";
+import { Button, ChakraProvider, Flex, Show, Text,useMediaQuery } from "@chakra-ui/react";
 import Player from "./assets/Player.png";
 import fireball from "./assets/fireball2.png";
 import left from "./assets/Left Side.png";
@@ -15,8 +15,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate, Link } from "react-ro
 import Register from "./pages/Register.jsx";
 import { useState } from "react";
 import VerticalNav from "./components/VerticalNav.jsx";
-
 function HomePage() {
+  const [isLargerThan800] = useMediaQuery('(min-width: 800px)')
   const [isMenuOpen, setMenuOpen] = useState(false);
   const handleRegister = () => {};
   return (
@@ -62,7 +62,7 @@ function HomePage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-                                    <VerticalNav/>
+              {isLargerThan800 ? <VerticalNav/> : <></>}
               <Show above="sm">
                 <Button
                   as={Link}

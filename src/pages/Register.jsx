@@ -7,7 +7,7 @@ import SportIndividual from "../components/SportIndividual";
 import SportTeam from "../components/SportTeam";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-
+import rulebook from "../assets/rulebook.pdf"
 function App() {
   const [mode, setMode] = useState("individual");
   const [fullName, setFullName] = useState("");
@@ -117,9 +117,11 @@ function App() {
                 <button className="border-white flex border-2 hover:bg-rred duration-300 active:bg-red-300 focus:outline-none rounded-lg text-white text-2xl px-5 py-2 font-Tourney font-black transition-colors">
                   PAY NOW
                 </button>
+                <a href={rulebook}>
                 <button className="border-white border-2 hover:bg-rred duration-300 active:bg-red-300 focus:outline-none rounded-lg text-white text-2xl px-5 py-2 font-Tourney font-black transition-colors">
                   RULE BOOK
                 </button>
+                </a>
               </div>
             </div>
           </div>
