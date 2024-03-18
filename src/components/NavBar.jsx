@@ -54,7 +54,6 @@ const NavBar = () => {
               <DropdownMenuItem className="flex">
                 <Link to="/">Rule Book</Link>
               </DropdownMenuItem>
-
               <DropdownMenuItem className="flex">
                 <Link to="/">Sponsors</Link>
               </DropdownMenuItem>
