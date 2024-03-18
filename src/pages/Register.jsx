@@ -114,9 +114,11 @@ function App() {
                 </Link>
               </div>
               <div className="mt-4 flex w-full flex-wrap lg:w-auto relative justify-evenly flex-row items-center lg:absolute lg:right-0 lg:mr-[17%] lg:gap-8">
+              <a href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm">
                 <button className="border-white flex border-2 hover:bg-rred duration-300 active:bg-red-300 focus:outline-none rounded-lg text-white text-2xl px-5 py-2 font-Tourney font-black transition-colors">
                   PAY NOW
                 </button>
+                </a>
                 <a href={rulebook}>
                 <button className="border-white border-2 hover:bg-rred duration-300 active:bg-red-300 focus:outline-none rounded-lg text-white text-2xl px-5 py-2 font-Tourney font-black transition-colors">
                   RULE BOOK
