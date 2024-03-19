@@ -15,6 +15,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate, Link } from "react-ro
 import Register from "./pages/Register.jsx";
 import { useState } from "react";
 import VerticalNav from "./components/VerticalNav.jsx";
+import AboutUs from "./pages/Aboutus.jsx";
+import Gallery from "./pages/Gallery.jsx";
 function HomePage() {
   const [isLargerThan800] = useMediaQuery('(min-width: 800px)')
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -326,6 +328,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/aboutus" element={<AboutUs/>} />
+        <Route path="/gallery" element={<Gallery/>} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>

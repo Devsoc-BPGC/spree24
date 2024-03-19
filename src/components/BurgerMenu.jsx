@@ -55,7 +55,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
          {/* Content */}
          <ul className="space-y-5 sm:space-y-10 md:space-y-10 text-center p-4 text-xl sm:text-4xl md:text-4xl font-Inter text-white pt-12 font-bold">
            <motion.li initial={{ x: 20, opacity: 0 }} exit={{ x: 20, opacity: 0, transition: { duration: 0.3 } }} animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 2.5 } }}>
-             <a href="#about-us" className="text-white-800 hover:text-white-600 relative">
+             <a href="aboutus" className="text-white-800 hover:text-white-600 relative">
                About Us
                <span className="underline"></span>
              </a>
@@ -71,7 +71,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
              exit={{ x: 20, opacity: 0, transition: { duration: 0.3, delay: 0.2 } }}
              animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 3.5 } }}
            >
-             <a href="#gallery" className="text-white-800 hover:text-white-600 relative">
+             <a href="gallery" className="text-white-800 hover:text-white-600 relative">
                Gallery
                <span className="underline"></span>
              </a>
