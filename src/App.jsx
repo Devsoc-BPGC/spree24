@@ -1,6 +1,13 @@
 import "./index.css";
 import BurgerMenu from "./components/BurgerMenu";
-import { Button, ChakraProvider, Flex, Show, Text,useMediaQuery } from "@chakra-ui/react";
+import {
+  Button,
+  ChakraProvider,
+  Flex,
+  Show,
+  Text,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import Player from "./assets/Player.png";
 import fireball from "./assets/fireball2.png";
 import left from "./assets/Left Side.png";
@@ -11,14 +18,21 @@ import insta from "./assets/insta.png";
 import { motion, AnimatePresence } from "framer-motion";
 import Countdown from "./components/Countdown";
 import Footer from "./components/Footer.jsx";
-import { BrowserRouter as Router, Routes, Route, Navigate, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  Link,
+} from "react-router-dom";
 import Register from "./pages/Register.jsx";
 import { useState } from "react";
 import VerticalNav from "./components/VerticalNav.jsx";
 import AboutUs from "./pages/Aboutus.jsx";
 import Gallery from "./pages/Gallery.jsx";
+import Sponsors from "./pages/Sponsors.jsx";
 function HomePage() {
-  const [isLargerThan800] = useMediaQuery('(min-width: 800px)')
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
   const [isMenuOpen, setMenuOpen] = useState(false);
   const handleRegister = () => {};
   return (
@@ -40,13 +54,23 @@ function HomePage() {
         position={"relative"}
       >
         <motion.div
-          style={{ alignItems: "center", display: "flex", justifyContent: "space-between", flexDirection: "column", overflow: "hidden", position: "relative", height: "100%", width: "100%" }}
+          style={{
+            alignItems: "center",
+            display: "flex",
+            justifyContent: "space-between",
+            flexDirection: "column",
+            overflow: "hidden",
+            position: "relative",
+            height: "100%",
+            width: "100%",
+          }}
           initial={{ backdropFilter: "brightness(1)" }}
-          animate={{ backdropFilter: isMenuOpen ? "brightness(0.7)" : "brightness(1)" }}
+          animate={{
+            backdropFilter: isMenuOpen ? "brightness(0.7)" : "brightness(1)",
+          }}
           transition={{ duration: 0.5, delay: 2 }}
         >
           <Flex width={"100%"} height={"15%"} justifyContent={"space-between"}>
-            
             <motion.img
               src={fireball}
               style={{ margin: "1%", height: "50%" }}
@@ -64,7 +88,7 @@ function HomePage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              {isLargerThan800 ? <VerticalNav/> : <></>}
+              {isLargerThan800 ? <VerticalNav /> : <></>}
               <Show above="sm">
                 <Button
                   as={Link}
@@ -88,7 +112,12 @@ function HomePage() {
             </motion.div>
             <BurgerMenu isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
           </Flex>
-          <Flex flexDirection={"column"} width={"100%"} alignItems={"center"} justifyContent={"center"}>
+          <Flex
+            flexDirection={"column"}
+            width={"100%"}
+            alignItems={"center"}
+            justifyContent={"center"}
+          >
             <AnimatePresence>
               {!isMenuOpen && (
                 <motion.img
@@ -113,7 +142,20 @@ function HomePage() {
                 zIndex: 2,
               }}
               initial={{ opacity: 0, x: 0, left: "auto" }}
-              animate={!isMenuOpen ? { opacity: 1, x: 0, transition: { duration: 2 }, left: "auto" } : { left: "20%", opacity: 1, transition: { delay: 2, duration: 0.5 } }}
+              animate={
+                !isMenuOpen
+                  ? {
+                      opacity: 1,
+                      x: 0,
+                      transition: { duration: 2 },
+                      left: "auto",
+                    }
+                  : {
+                      left: "20%",
+                      opacity: 1,
+                      transition: { delay: 2, duration: 0.5 },
+                    }
+              }
             />
             <AnimatePresence>
               {!isMenuOpen && (
@@ -249,7 +291,13 @@ function HomePage() {
               </AnimatePresence>
             </Flex>
           </Flex>
-          <Flex width={"100%"} alignItems={"center"} justifyContent={"end"} height={"15%"} flexDir={{ base: "column", md: "row-reverse" }}>
+          <Flex
+            width={"100%"}
+            alignItems={"center"}
+            justifyContent={"end"}
+            height={"15%"}
+            flexDir={{ base: "column", md: "row-reverse" }}
+          >
             {!isMenuOpen ? (
               <>
                 <motion.div
@@ -265,7 +313,17 @@ function HomePage() {
                   transition={{ delay: 5, duration: 0.5 }}
                 >
                   <Show above="md">
-                    <Button as={Link} to={"https://www.instagram.com/bitsspree/"} backgroundImage={insta} backgroundColor={"transparent"} _hover={{}} _active={{}} width={"30%"} backgroundSize={"cover"} height={"50%"} />
+                    <Button
+                      as={Link}
+                      to={"https://www.instagram.com/bitsspree/"}
+                      backgroundImage={insta}
+                      backgroundColor={"transparent"}
+                      _hover={{}}
+                      _active={{}}
+                      width={"30%"}
+                      backgroundSize={"cover"}
+                      height={"50%"}
+                    />
                   </Show>
                 </motion.div>
                 <Show above="md">
@@ -281,15 +339,22 @@ function HomePage() {
                     exit={{ opacity: 0 }}
                     transition={{ delay: 4.5, duration: 0.5 }}
                   >
-                    Embrace the challenge, rally for your convictions, and let the intensity of competition ignite the passion within.
+                    Embrace the challenge, rally for your convictions, and let
+                    the intensity of competition ignite the passion within.
                   </motion.p>
                 </Show>
               </>
             ) : (
-              <motion.div style={{ width: "40%", color: "white" }} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}>
+              <motion.div
+                style={{ width: "40%", color: "white" }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}
+              >
                 <Show above="md">
                   <Text fontSize={"xs"}>
-                    &quot;You, me or nobody is gonna hit as hard as life. But it ain&apos;t about how hard you hit. It&apos;s about how hard you can get hit... and keep moving forward.&quot;
+                    &quot;You, me or nobody is gonna hit as hard as life. But it
+                    ain&apos;t about how hard you hit. It&apos;s about how hard
+                    you can get hit... and keep moving forward.&quot;
                   </Text>
                   <Text fontSize={"xs"}>-Rocky (2006 Movie)</Text>
                 </Show>
@@ -328,8 +393,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/aboutus" element={<AboutUs/>} />
-        <Route path="/gallery" element={<Gallery/>} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/sponsors" element={<Sponsors />} />
+
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
