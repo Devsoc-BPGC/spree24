@@ -156,7 +156,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                     href="sponsors"
                     className="text-white-800 hover:text-white-600 relative"
                   >
-                    SPONSORS
+                    Sponsors
                     <span className="underline"></span>
                   </a>
                 </motion.li>
