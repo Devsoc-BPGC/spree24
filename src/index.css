@@ -4,3 +4,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-shadow-orange-stroke {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the shadow values as needed */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: orange;
+  }
+  
