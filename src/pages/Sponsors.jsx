@@ -5,6 +5,8 @@ import junglee from "../assets/sponsors/junglee.jpeg";
 import blinkit from "../assets/sponsors/blinkit.svg";
 import himal from "../assets/sponsors/himal.jpg";
 
+import hipop from "../assets/sponsors/hipop.jpeg";
+
 import peta from "../assets/sponsors/peta.svg";
 import safe from "../assets/sponsors/safe.png";
 import sbi from "../assets/sponsors/sbi.png";
@@ -59,7 +61,7 @@ let arr = [
   {
     title: "Hipop",
     dsgn: "Festival Partner",
-    img: "",
+    img: hipop,
     link: "https://www.drinkhipop.com/",
   },
   {
