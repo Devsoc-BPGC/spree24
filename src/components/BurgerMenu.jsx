@@ -178,7 +178,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                       }}
                     >
                       <a
-                        href="#media"
+                        href="media"
                         className="text-white-800 hover:text-white-600 relative"
                       >
                         Media Partner
