@@ -31,6 +31,8 @@ import VerticalNav from "./components/VerticalNav.jsx";
 import AboutUs from "./pages/Aboutus.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import Sponsors from "./pages/Sponsors.jsx";
+import Media from "./pages/Media.jsx";
+
 function HomePage() {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -396,6 +398,7 @@ const App = () => {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/sponsors" element={<Sponsors />} />
+        <Route path="/media" element={<Media />} />
 
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
