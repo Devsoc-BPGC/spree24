@@ -11,20 +11,20 @@ import bgimg from '../assets/Gallery/bggal.png'
 
 
 const IMAGES = [
-  <img src={img1} alt="Slide 1" loading="lazy" className="h-full w-full rounded-[30px] object-cover object-center overflow-hidden sm:max-md:aspect-square" />,
-  <img src={img2} alt="Slide 2" loading="lazy" className="h-full w-full rounded-[30px] object-cover object-center overflow-hidden sm:max-md:aspect-square" />,
-  <img src={img3} alt="Slide 3" loading="lazy" className="h-full w-full rounded-[30px] object-cover object-center overflow-hidden sm:max-md:aspect-square" />,
-  <img src={img4} alt="Slide 4" loading="lazy" className="h-full w-full rounded-[30px] object-cover object-center overflow-hidden sm:max-md:aspect-square" />,
-  <img src={img5} alt="Slide 5" loading="lazy" className="h-full w-full rounded-[30px] object-cover object-center overflow-hidden sm:max-md:aspect-square" />,
-  <img src={img6} alt="Slide 6" loading="lazy" className="h-full w-full rounded-[30px] object-cover object-center overflow-hidden sm:max-md:aspect-square" />
+  <img src={img1} alt="Slide 1" loading="lazy" className="h-full w-full rounded-[30px] object-cover object-center overflow-hidden max-md:aspect-square" />,
+  <img src={img2} alt="Slide 2" loading="lazy" className="h-full w-full rounded-[30px] object-cover object-center overflow-hidden max-md:aspect-square" />,
+  <img src={img3} alt="Slide 3" loading="lazy" className="h-full w-full rounded-[30px] object-cover object-center overflow-hidden max-md:aspect-square" />,
+  <img src={img4} alt="Slide 4" loading="lazy" className="h-full w-full rounded-[30px] object-cover object-center overflow-hidden max-md:aspect-square" />,
+  <img src={img5} alt="Slide 5" loading="lazy" className="h-full w-full rounded-[30px] object-cover object-center overflow-hidden max-md:aspect-square" />,
+  <img src={img6} alt="Slide 6" loading="lazy" className="h-full w-full rounded-[30px] object-cover object-center overflow-hidden max-md:aspect-square" />
 ];
 
 
 function Gallery() {
   return (
-    <div className="sm:max-md:overflow-hidden min-h-screen bg-[#F7A23F] flex justify-center" style={{ backgroundImage: `url(${bgimg})`, backgroundSize: 'cover' }}>
+    <div className="max-md:overflow-hidden min-h-screen bg-[#F7A23F] flex justify-center" style={{ backgroundImage: `url(${bgimg})`, backgroundSize: 'cover' }}>
       <div className="h-full ">
-      <h1 className="text-center ml-0 mb-10 mt-5 font-medium text-white text-6xl font-Rampart text-4xl md:text-7xl text-shadow-orange-stroke">GALLERY</h1>
+      <h1 className="text-center ml-0 mb-10 mt-5 font-medium text-white text-6xl font-Rampart text-[2.2rem] lg:text-[4.5rem] text-shadow-orange-stroke">GALLERY</h1>
       <div className='bg-[#005C65] py-10'>
 
       <Carousel items={IMAGES}/>
