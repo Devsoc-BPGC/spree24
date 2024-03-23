@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import amar from "../assets/media/amar.png";
 import blogadda from "../assets/media/blogadda.png";
 import Bullspree from "../assets/media/Bullspree.png";
@@ -18,7 +18,7 @@ import RDXGoa from "../assets/media/RDXGoa.png";
 import TechStory from "../assets/media/TechStory.jpeg";
 import youth from "../assets/media/youth.png";
 import zex from "../assets/media/zex.png";
-
+import Nav from "../components/Nav";
 let arr = [
   {
     title: "Bullspree",
@@ -135,40 +135,43 @@ const Sponsors = () => {
   return (
     <div className="min-h-screen bg-cover bg-[#015c6a] ">
       <div className="bg-[url('./assets/spon_bg.png')] bg-contain min-h-screen">
-        <div
-          className="lg:text-8xl lg:ml-4 text-5xl tracking-wider flex justify-center items-center lg:justify-start text-white font-extrabold [text-shadow:_0_5px_0_rgb(0_0_0_/_40%)]"
-          style={{
-            textShadow:
-              "4px 0 #cd6230, -4px 0 #cd6230, 0 4px #cd6230, 0 -2px #cd6230, 2px 2px #cd6230, -2px -2px #cd6230, 1px -1px #cd6230, -1px 1px #cd6230",
-          }}
-        >
-          Media Partners
+        <div className="fixed right-2 lg:top-2 top-2 h-10 ">
+          <Nav />
         </div>
-        <div className="flex flex-col lg:mt-24 mt-20 justify-center items-center">
-          {arr.map((media, index) => {
-            return (
-              <div
-                key={index}
-                className="flex justify-center items-center lg:mb-16 mb-14 flex-col"
-              >
+        <div className="z-10">
+          <div
+            className="lg:text-8xl lg:ml-4 text-4xl tracking-wider flex justify-start ml-2 items-center lg:justify-start text-white font-extrabold [text-shadow:_0_5px_0_rgb(0_0_0_/_40%)]"
+            style={{
+              textShadow:
+                "4px 0 #cd6230, -4px 0 #cd6230, 0 4px #cd6230, 0 -2px #cd6230, 2px 2px #cd6230, -2px -2px #cd6230, 1px -1px #cd6230, -1px 1px #cd6230",
+            }}
+          >
+            Media Partners
+          </div>
+          <div className="flex flex-col lg:mt-24 mt-20 justify-center items-center">
+            {arr.map((sponsor, index) => {
+              return (
                 <div
-                  className="lg:text-5xl text-xl font-bold tracking-wide lg:font-bold text-white"
-                  style={{
-                    textShadow:
-                      "2px 0 #cd6230, -2px 0 #cd6230, 0 2px #cd6230, 0 -2px #cd6230, 2px 2px #cd6230, -2px -2px #cd6230, 1px -1px #cd6230, -1px 1px #cd6230",
-                  }}
+                  key={index}
+                  className="flex justify-center items-center lg:mb-16 mb-14 flex-col"
                 >
-                  {media.dsgn}
-                </div>
-                <Link to={media.link} target="_blank">
+                  <div
+                    className="lg:text-5xl text-2xl font-bold tracking-wide lg:font-bold text-white"
+                    style={{
+                      textShadow:
+                        "2px 0 #cd6230, -2px 0 #cd6230, 0 2px #cd6230, 0 -2px #cd6230, 2px 2px #cd6230, -2px -2px #cd6230, 1px -1px #cd6230, -1px 1px #cd6230",
+                    }}
+                  >
+                    {sponsor.dsgn}
+                  </div>
                   <img
-                    src={media.img}
-                    className="lg:h-56 h-36 bg-contain  mt-4 "
+                    src={sponsor.img}
+                    className="lg:h-56 h-36 bg-contain mt-4 "
                   ></img>
-                </Link>
-              </div>
-            );
-          })}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
