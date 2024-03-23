@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import { useEffect, useState } from "react";
 import coke from "../assets/sponsors/coke.png";
 import junglee from "../assets/sponsors/junglee.jpeg";
 import blinkit from "../assets/sponsors/blinkit.svg";
@@ -15,6 +15,7 @@ import cosco from "../assets/sponsors/cosco.png";
 import tat from "../assets/sponsors/tat.jpeg";
 import tees from "../assets/sponsors/tees.png";
 
+import Nav from "../components/Nav";
 let arr = [
   {
     title: "Coco Cola",
@@ -94,40 +95,45 @@ const Sponsors = () => {
   return (
     <div className="min-h-screen bg-cover bg-[#015c6a] ">
       <div className="bg-[url('./assets/spon_bg.png')] bg-contain min-h-screen">
-        <div
-          className="lg:text-8xl lg:ml-4 text-6xl tracking-wider flex justify-center items-center lg:justify-start text-white font-extrabold [text-shadow:_0_5px_0_rgb(0_0_0_/_40%)]"
-          style={{
-            textShadow:
-              "4px 0 #cd6230, -4px 0 #cd6230, 0 4px #cd6230, 0 -2px #cd6230, 2px 2px #cd6230, -2px -2px #cd6230, 1px -1px #cd6230, -1px 1px #cd6230",
-          }}
-        >
-          Sponsors
-        </div>
-        <div className="flex flex-col lg:mt-24 mt-20 justify-center items-center">
-          {arr.map((sponsor, index) => {
-            return (
-              <div
-                key={index}
-                className="flex justify-center items-center lg:mb-16 mb-14 flex-col"
-              >
+        <div className="z-10">
+          <div className="fixed right-2 lg:top-2 top-2 h-10 ">
+            <Nav />
+          </div>
+          <div
+            className="lg:text-8xl lg:ml-4 text-6xl tracking-wider flex justify-start ml-2 items-center lg:justify-start text-white font-extrabold [text-shadow:_0_5px_0_rgb(0_0_0_/_40%)]"
+            style={{
+              textShadow:
+                "4px 0 #cd6230, -4px 0 #cd6230, 0 4px #cd6230, 0 -2px #cd6230, 2px 2px #cd6230, -2px -2px #cd6230, 1px -1px #cd6230, -1px 1px #cd6230",
+            }}
+          >
+            Sponsors
+          </div>
+          <div className="flex flex-col lg:mt-24 mt-20 justify-center items-center">
+            {arr.map((sponsor, index) => {
+              return (
                 <div
-                  className="lg:text-5xl text-2xl font-bold tracking-wide lg:font-bold text-white"
-                  style={{
-                    textShadow:
-                      "2px 0 #cd6230, -2px 0 #cd6230, 0 2px #cd6230, 0 -2px #cd6230, 2px 2px #cd6230, -2px -2px #cd6230, 1px -1px #cd6230, -1px 1px #cd6230",
-                  }}
+                  key={index}
+                  className="flex justify-center items-center lg:mb-16 mb-14 flex-col"
                 >
-                  {sponsor.dsgn}
+                  <div
+                    className="lg:text-5xl text-2xl font-bold tracking-wide lg:font-bold text-white"
+                    style={{
+                      textShadow:
+                        "2px 0 #cd6230, -2px 0 #cd6230, 0 2px #cd6230, 0 -2px #cd6230, 2px 2px #cd6230, -2px -2px #cd6230, 1px -1px #cd6230, -1px 1px #cd6230",
+                    }}
+                  >
+                    {sponsor.dsgn}
+                  </div>
+                  <Link to={sponsor.link} target="_blank">
+                    <img
+                      src={sponsor.img}
+                      className="lg:h-56 h-36 bg-contain mt-4 "
+                    ></img>
+                  </Link>
                 </div>
-                <Link to={sponsor.link} target="_blank">
-                  <img
-                    src={sponsor.img}
-                    className="lg:h-56 h-36 bg-contain mt-4 "
-                  ></img>
-                </Link>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

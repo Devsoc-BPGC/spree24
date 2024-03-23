@@ -1,5 +1,4 @@
-import React from "react";
-import { Flex, Box, Text, VStack } from "@chakra-ui/react";
+import { Flex, Box, VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 const VerticalText = ({ children }) => {
   return (
