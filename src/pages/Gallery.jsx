@@ -24,7 +24,7 @@
     return (
       <div className="max-md:overflow-hidden min-h-screen bg-[#F7A23F] flex justify-center flex-col max-md:items-center" style={{ backgroundImage: `url(${bgimg})`, backgroundSize: 'cover' }}>
         <div className="max-md:mb-[20%] max-md:mt-[-30%]">
-        <h1 className="text-center ml-0 mb-10 mt-5 font-medium text-white text-6xl font-Rampart text-[3.75rem] lg:text-[4.5rem] text-shadow-orange-stroke">GALLERY</h1>
+        <h1 className="text-center ml-0 mb-10 mt-5 font-medium text-white text-6xl font-Rampart text-[3.4rem] lg:text-[4.5rem] text-shadow-orange-stroke">GALLERY</h1>
         </div>
         <div className='lg:bg-[#005C65] py-10 '>
 
