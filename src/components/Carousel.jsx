@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import arrow_left from '../assets/icon.png';
 import dot from '../assets/dot.png';
 import dot_clicked from '../assets/dot_clicked.png';
@@ -10,6 +10,7 @@ const Carousel = ({ items }) => {
   const [prev2Index, setPrev2Index] = useState(2);
   const [nextIndex, setNextIndex] = useState(3);
   const [next2Index, setNext2Index] = useState(4);
+  const carouselRef = useRef(null);
   let n = nextIndex;
   let n2 = next2Index;
   let p = prevIndex;
@@ -50,10 +51,24 @@ const Carousel = ({ items }) => {
     setActiveIndex(newIndex);
     console.log(nextIndex, next2Index, prevIndex, prev2Index, activeIndex);
   };
+
+  const handleTouchStart = (event) => {
+    const { clientX } = event.touches[0];
+    const { left, width } = carouselRef.current.getBoundingClientRect();
+    const touchPositionX = clientX - left;
+    const isRightHalf = touchPositionX > width / 2;
+    if (isRightHalf) {
+      updateIndex(activeIndex + 1);
+    } else {
+      updateIndex(activeIndex - 1);
+    }
+  };
   
 
   return (
-    <div className="overflow-hidden flex flex-col items-center justify-center w-[100%] md:w-[70%] mx-auto ">
+    <div className="overflow-hidden flex flex-col items-center justify-center w-[100%] md:w-[70%] mx-auto "
+    onTouchStart={handleTouchStart}
+    ref={carouselRef}>
       <div className="overflow-hidden whitespace-nowrap transition-transform duration-300">
         <div className="flex justify-center">
           <div className="carousel-image-wrapper" style={{ marginRight: '-30%', transform: 'scale(0.7)' }}>
