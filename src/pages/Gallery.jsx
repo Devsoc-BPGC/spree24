@@ -23,8 +23,8 @@
   function Gallery() {
     return (
       <div className="max-md:overflow-hidden min-h-screen bg-[#F7A23F] flex justify-center flex-col max-md:items-center" style={{ backgroundImage: `url(${bgimg})`, backgroundSize: 'cover' }}>
-        <div className="">
-        <h1 className="text-center ml-0 mb-10 mt-5 font-medium text-white text-6xl font-Rampart text-[2.2rem] lg:text-[4.5rem] text-shadow-orange-stroke">GALLERY</h1>
+        <div className="mb-[20%] mt-[-30%]">
+        <h1 className="text-center ml-0 mb-10 mt-5 font-medium text-white text-6xl font-Rampart text-[3rem] lg:text-[4.5rem] text-shadow-orange-stroke">GALLERY</h1>
         </div>
         <div className='lg:bg-[#005C65] py-10 '>
 
