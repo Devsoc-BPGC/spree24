@@ -50,8 +50,8 @@ const Carousel = ({ items }) => {
   
 
   return (
-    <div className="overflow-hidden flex flex-col items-center justify-center w-[100%] md:w-[70%] mx-auto">
-      <div className="overflow-hidden whitespace-nowrap transition-transform duration-300 shadow-md">
+    <div className="overflow-hidden flex flex-col items-center justify-center w-[100%] md:w-[70%] mx-auto ">
+      <div className="overflow-hidden whitespace-nowrap transition-transform duration-300">
         <div className="flex justify-center">
           <div className="carousel-image-wrapper" style={{ marginRight: '-30%', transform: 'scale(0.7)' }}>
             {items[prev2Index]}
