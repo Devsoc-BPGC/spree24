@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import spree_theme from "../assets/spree_theme.jpg";
 import spree_theme_mobile from "../assets/spree_theme_mobile.jpg";
 import aftermovie from "../assets/aftermovie.jpg";
-import aftermovie_mobile from "../assets/aftermovie_mobile.png";
+import aftermovie_mobile from "../assets/aftermovie_mobile.jpg";
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 export default function SimpleSlider() {

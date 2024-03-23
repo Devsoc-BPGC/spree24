@@ -9,6 +9,7 @@ import item4 from '../assets/SlideItem4.png';
 import item5 from '../assets/SlideItem5.png';
 import bg_aboutus from '../assets/bg_aboutus.png';
 import football from '../assets/football.png';
+import football_mobile from '../assets/football_mobile.png'; // Import football_mobile image
 
 const Slides = [
   <img src={item1} alt="Slide 1" className="w-800 h-400" />,
@@ -22,7 +23,8 @@ function AboutUs() {
   return (
     <div className="h-screen md:h-full md:bg-cover bg-auto" style={{ backgroundImage: `url(${bg_aboutus})`}}>
       <div className="flex flex-col justify-start bg-contain md:bg-auto" style={{
-        backgroundImage: `url(${football})`,
+        // Conditionally render background image based on screen size
+        backgroundImage: `url(${window.innerWidth <= 768 ? football_mobile : football})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center left',
         backgroundPositionX: '17%' 

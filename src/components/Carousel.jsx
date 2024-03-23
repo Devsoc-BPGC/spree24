@@ -40,6 +40,9 @@ const Carousel = ({ items }) => {
       newN2 = n;
       newN = newIndex - 1;
     }
+    if(newP === newIndex) {
+      newP = newIndex + 1;
+    }
     setNextIndex(newN);
     setNext2Index(newN2);
     setPrevIndex(newP);
