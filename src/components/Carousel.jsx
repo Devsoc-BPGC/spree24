@@ -8,8 +8,8 @@ const Carousel = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [prevIndex, setPrevIndex] = useState(1);
   const [prev2Index, setPrev2Index] = useState(2);
-  const [nextIndex, setNextIndex] = useState(3);
-  const [next2Index, setNext2Index] = useState(4);
+  const [nextIndex, setNextIndex] = useState(4);
+  const [next2Index, setNext2Index] = useState(3);
   const carouselRef = useRef(null);
   let n = nextIndex;
   let n2 = next2Index;
@@ -67,10 +67,11 @@ const Carousel = ({ items }) => {
 
   return (
     <div className="overflow-hidden flex flex-col items-center justify-center w-[100%] md:w-[70%] mx-auto "
+   
     onTouchStart={handleTouchStart}
     ref={carouselRef}>
       <div className="overflow-hidden whitespace-nowrap transition-transform duration-300">
-        <div className="flex justify-center">
+        <div className="flex ml-[%] justify-center">
           <div className="carousel-image-wrapper" style={{ marginRight: '-30%', transform: 'scale(0.7)' }}>
             {items[prev2Index]}
           </div>
@@ -83,7 +84,7 @@ const Carousel = ({ items }) => {
           <div className="carousel-image-wrapper" style={{ marginLeft: '-20%', transform: 'scale(0.8)', zIndex: 1 }}>
             {items[nextIndex]}
           </div>
-          <div className="carousel-image-wrapper" style={{ marginLeft: '-25%', transform: 'scale(0.6)' }}>
+          <div className="carousel-image-wrapper" style ={{ marginLeft: '-30%', transform: 'scale(0.7)' }}>
             {items[next2Index]}
           </div>
         </div>
