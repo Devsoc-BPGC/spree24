@@ -132,7 +132,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                   }}
                 >
                   <a
-                    href="gallery"
+                    href="/gallery"
                     className="text-white-800 hover:text-white-600 relative"
                   >
                     Gallery
@@ -153,7 +153,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                   }}
                 >
                   <a
-                    href="sponsors"
+                    href="/sponsors"
                     className="text-white-800 hover:text-white-600 relative"
                   >
                     Sponsors
@@ -178,7 +178,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                       }}
                     >
                       <a
-                        href="media"
+                        href="/media"
                         className="text-white-800 hover:text-white-600 relative"
                       >
                         Media Partner
@@ -199,7 +199,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                       }}
                     >
                       <a
-                        href="#sponsor"
+                        href="/sponsor"
                         className="text-white-800 hover:text-white-600 relative"
                       >
                         Sponsor
@@ -241,7 +241,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                       }}
                     >
                       <a
-                        href="#media"
+                        href="/media"
                         className="text-white-800 hover:text-white-600 relative"
                       >
                         Contact Us

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import amar from "../assets/media/amar.png";
 import blogadda from "../assets/media/blogadda.png";
 import Bullspree from "../assets/media/Bullspree.png";
@@ -149,7 +148,7 @@ const Sponsors = () => {
             Media Partners
           </div>
           <div className="flex flex-col lg:mt-24 mt-20 justify-center items-center">
-            {arr.map((sponsor, index) => {
+            {arr.map((media, index) => {
               return (
                 <div
                   key={index}
@@ -162,10 +161,10 @@ const Sponsors = () => {
                         "2px 0 #cd6230, -2px 0 #cd6230, 0 2px #cd6230, 0 -2px #cd6230, 2px 2px #cd6230, -2px -2px #cd6230, 1px -1px #cd6230, -1px 1px #cd6230",
                     }}
                   >
-                    {sponsor.dsgn}
+                    {media.dsgn}
                   </div>
                   <img
-                    src={sponsor.img}
+                    src={media.img}
                     className="lg:h-56 h-36 bg-contain mt-4 "
                   ></img>
                 </div>
