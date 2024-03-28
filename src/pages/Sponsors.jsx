@@ -14,14 +14,30 @@ import taali from "../assets/sponsors/taali.png";
 import cosco from "../assets/sponsors/cosco.png";
 import tat from "../assets/sponsors/tat.jpeg";
 import tees from "../assets/sponsors/tees.png";
+import skippi from "../assets/sponsors/skippi.png";
+import mogu from "../assets/sponsors/mogu.png";
+import exceedd from "../assets/sponsors/exceedd.png";
+import oneplus from "../assets/sponsors/oneplus.png";
+import maxpro from "../assets/sponsors/maxpro.png";
+import ferr from "../assets/sponsors/ferr.png";
+import skechers from "../assets/sponsors/skechers.png";
+import icici from "../assets/sponsors/icici.png";
+import times from "../assets/sponsors/times.png";
+import spi from "../assets/sponsors/spi.png";
+import medial from "../assets/sponsors/medial.png";
+import trends from "../assets/sponsors/trends.png";
+import plum from "../assets/sponsors/plum.png";
+import kamat from "../assets/sponsors/kamat.png";
+import probox from "../assets/sponsors/probox.png";
+import oatey from "../assets/sponsors/oatey.jpeg";
 
 import Nav from "../components/Nav";
 let arr = [
   {
-    title: "Coco Cola",
-    dsgn: "Powered By",
-    img: coke,
-    link: "https://www.coca-colacompany.com/",
+    title: "Cosco",
+    dsgn: "Associater Prartner of Volleyball",
+    img: cosco,
+    link: "https://www.cosco.in/",
   },
   {
     title: "Junglee Games",
@@ -30,22 +46,10 @@ let arr = [
     link: "https://www.jungleegames.com/",
   },
   {
-    title: "SBI",
-    dsgn: "Associate Banking Sponsor",
-    img: sbi,
-    link: "https://www.onlinesbi.com/",
-  },
-  {
-    title: "PETA",
-    dsgn: "Animal Welfare Partner",
-    img: peta,
-    link: "https://www.petaindia.com/",
-  },
-  {
-    title: "Blinkit",
-    dsgn: "Official Instant Delivery Partner",
-    img: blinkit,
-    link: "https://www.blinkit.com/",
+    title: "Himalaya Wellness",
+    dsgn: "Festival Skin Care Partner",
+    img: himal,
+    link: "https://himalayawellness.in/",
   },
   {
     title: "Safexpress",
@@ -54,16 +58,10 @@ let arr = [
     link: "https://www.safexpress.com/",
   },
   {
-    title: "Cosco",
-    dsgn: "Associate Partner of Volleyball",
-    img: cosco,
-    link: "https://www.cosco.in/",
-  },
-  {
     title: "Hipop",
     dsgn: "Festival Partner",
     img: hipop,
-    link: "https://www.drinkhipop.com/",
+    link: "https://drinkhipop.com",
   },
   {
     title: "Teeshood",
@@ -72,22 +70,149 @@ let arr = [
     link: "https://www.teeshood.com/",
   },
   {
-    title: "Tatto Tattva",
-    dsgn: "Festival Partner",
-    img: tat,
-    link: "https://www.instagram.com/tattoo_tattva?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-  },
-  {
-    title: "Himalaya Wellness",
-    dsgn: "Festival Skin Care Partner",
-    img: himal,
-    link: "https://himalayawellness.in/",
+    title: "Peta",
+    dsgn: "Animal Welfare Partner",
+    img: peta,
+    link: "https://www.petaindia.com/",
   },
   {
     title: "Taali",
     dsgn: "Festival Snacking Partner",
     img: taali,
     link: "https://taalifoods.in/",
+  },
+  {
+    title: "Tattoo Tattva",
+    dsgn: "Festival Partner",
+    img: tat,
+    link: "https://www.instagram.com/tattoo_tattva?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  },
+  {
+    title: "Coca Cola",
+    dsgn: "Powered By",
+    img: coke,
+    link: "https://www.coca-colacompany.com/",
+  },
+  {
+    title: "SBI",
+    dsgn: "Associate Banking Partner",
+    img: sbi,
+    link: "https://www.onlinesbi.sbi/",
+  },
+  {
+    title: "Blinkit",
+    dsgn: "Official Instant Delivery Partner",
+    img: blinkit,
+    link: "https://blinkit.com/",
+  },
+
+  {
+    title: "Skippi",
+    dsgn: "Offical Ice Popsicle Partner",
+    img: skippi,
+    link: "https://skippi.in/",
+  },
+  {
+    title: "Mogu Mogu",
+    dsgn: "Official Juice Partner",
+    img: mogu,
+    link: "https://getmogumogo.com/",
+  },
+  {
+    title: "Exceedd",
+    dsgn: "Finance Partner",
+    img: exceedd,
+    link: null,
+  },
+  {
+    title: "Oneplus",
+    dsgn: "Title Sponsor of Bollywood Night",
+    img: oneplus,
+    link: "https://www.oneplus.in/",
+  },
+  {
+    title: "Max Protein",
+    dsgn: "Festival Protein Partner",
+    img: maxpro,
+    link: "https://maxprotein.in/",
+  },
+  {
+    title: "Ferrero",
+    dsgn: "Official Chocolate",
+    img: ferr,
+    link: "https://www.ferrero.com/int/en/",
+  },
+  {
+    title: "Skechers",
+    dsgn: "Official Fashion Partner",
+    img: skechers,
+    link: "https://www.skechers.in/",
+  },
+  {
+    title: "ICICI",
+    dsgn: "Festival Partner",
+    img: icici,
+    link: "https://www.icicibank.com/",
+  },
+  {
+    title: "Times Prime",
+    dsgn: "Official Subscriptions Partner",
+    img: times,
+    link: "https://www.timesprime.com/",
+  },
+  {
+    title: "Spiky Sips",
+    dsgn: "Festivals Refreshment Partner",
+    img: spi,
+    link: "https://spikysips.com/",
+  },
+  {
+    title: "Medial",
+    dsgn: "Social Networking Partner",
+    img: medial,
+    link: "https://mediatalapp.medium.com/introducing-medial-the-next-gen-professional-social-media-app-14dd6449f6cf",
+  },
+  {
+    title: "Reliance Trends",
+    dsgn: "Festival Partner",
+    img: trends,
+    link: "https://relianceretail.com/reliance-trends.html",
+  },
+  {
+    title: "Plum Goodness",
+    dsgn: "Skincare Partner",
+    img: plum,
+    link: "https://plumgoodness.com/",
+  },
+  {
+    title: "Kamat Realty",
+    dsgn: "Official Real Estate Partner",
+    img: kamat,
+    link: "https://kamatrealty.com/",
+  },
+  {
+    title: "Real",
+    dsgn: "Hydration Partner",
+    img: null,
+    link: null,
+  },
+  {
+    title: "Princess",
+    dsgn: "Hydration Partner",
+    img: null,
+    link: null,
+  },
+  {
+    title: "Protein Box",
+    dsgn: "Health Foods Partner",
+    img: probox,
+    link: "https://protein-box.com/",
+  },
+  {
+    title: "Oatey",
+    dsgn: "Sustainable Healthy Plant Based Milk Partner",
+    img: oatey,
+    link: "https://oatey.in/",
   },
 ];
 
