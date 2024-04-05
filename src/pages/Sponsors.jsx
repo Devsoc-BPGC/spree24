@@ -124,8 +124,8 @@ let arr = [
   {
     title: "Exceedd",
     dsgn: "Finance Partner",
-    img: exceedd,
-    link: exce,
+    img: exce,
+    link: null,
   },
   {
     title: "Oneplus",
