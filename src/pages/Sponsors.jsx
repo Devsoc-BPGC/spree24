@@ -6,6 +6,9 @@ import blinkit from "../assets/sponsors/blinkit.svg";
 import himal from "../assets/sponsors/himal.jpg";
 
 import hipop from "../assets/sponsors/hipop.jpeg";
+import exce from "../assets/sponsors/exce.jpeg";
+import reak from "../assets/sponsors/reak.jpg";
+import prin from "../assets/sponsors/prin.jpeg";
 
 import peta from "../assets/sponsors/peta.svg";
 import safe from "../assets/sponsors/safe.png";
@@ -122,7 +125,7 @@ let arr = [
     title: "Exceedd",
     dsgn: "Finance Partner",
     img: exceedd,
-    link: null,
+    link: exce,
   },
   {
     title: "Oneplus",
@@ -193,13 +196,13 @@ let arr = [
   {
     title: "Real",
     dsgn: "Hydration Partner",
-    img: null,
+    img: reak,
     link: null,
   },
   {
     title: "Princess",
     dsgn: "Hydration Partner",
-    img: null,
+    img: prin,
     link: null,
   },
   {
