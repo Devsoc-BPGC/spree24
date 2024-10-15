@@ -1,14 +1,29 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Button, Icon, useMediaQuery } from "@chakra-ui/react";
+import {
+  Button,
+  Icon,
+  useMediaQuery,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+  Box
+} from "@chakra-ui/react";
 import navLogo from "../assets/navbar.png";
 import "./menu.css";
 import PropTypes from "prop-types";
+
 
 const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
   BurgerMenu.propTypes = {
     isMenuOpen: PropTypes.bool.isRequired,
     setMenuOpen: PropTypes.func.isRequired,
   };
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
@@ -240,11 +255,10 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                         transition: { duration: 1, delay: 4 },
                       }}
                     >
-                      <a
-                        href="/media"
-                        className="text-white-800 hover:text-white-600 relative"
-                      >
-                        Contact Us
+                      <a className="text-white-800 hover:text-white-600 relative">
+                        <Box as="button" onClick={onOpen}>
+                          Contact Us
+                        </Box>
                         <span className="underline"></span>
                       </a>
                     </motion.li>
@@ -255,6 +269,44 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
           )}
         </AnimatePresence>
       </div>
+      <Modal isOpen={isOpen} onClose={onClose} isCentered>
+        <ModalOverlay />
+        <ModalContent
+          bg="rgba(255,255,255,0.2)"
+          backdropFilter="blur(10px)"
+          borderRadius="md"
+          border="1px solid rgba(255, 255, 255, 0.3)"
+          boxShadow="0 4px 6px rgba(0, 0, 0, 0.1)"
+        >
+          <ModalHeader style={{ color: "white" }}>Contact Us</ModalHeader>
+          <ModalBody>
+            <Box textAlign="center" fontFamily="alata" lineHeight="1.8">
+              <p style={{ color: "white" }}>Feel free to reach out to us at</p>
+              <Box fontWeight="bold" fontSize="1.2rem" color="white">
+                <p>+91 82399 95529</p>
+              </Box>
+              <Box mt={4} fontSize="1rem">
+                <p
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "1.2rem",
+                    color: "white",
+                  }}
+                >
+                  PALASH SANGHHI
+                </p>
+                <p style={{ color: "white" }}>~ Spree Convener</p>
+              </Box>
+            </Box>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button className="bg:#005B71" onClick={onClose}>
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </>
   );
 };
