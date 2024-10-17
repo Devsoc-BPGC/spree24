@@ -86,7 +86,7 @@ function VerticalNav() {
               </Box>
               <Box mt={4} fontSize="1rem">
                 <p style={{ fontWeight: "bold", fontSize: "1.2rem" , color:"white"}}>
-                  PALASH SANGHHI
+                  PALASH SANGHI
                 </p>
                 <p style={{ color: "white" }}>~ Spree Convener</p>
               </Box>

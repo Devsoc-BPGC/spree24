@@ -293,7 +293,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                     color: "white",
                   }}
                 >
-                  PALASH SANGHHI
+                  PALASH SANGHI
                 </p>
                 <p style={{ color: "white" }}>~ Spree Convener</p>
               </Box>
