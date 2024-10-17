@@ -271,7 +271,7 @@ function HomePage() {
                         },
                       }}
                     >
-                      {Array.from("28-MARCH-2025").map((item, index) => {
+                      {Array.from("28-30 MARCH-2025").map((item, index) => {
                         return (
                           <motion.span
                             key={index}
