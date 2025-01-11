@@ -280,9 +280,9 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
         >
           <ModalHeader style={{ color: "white" }}>Contact Us</ModalHeader>
           <ModalBody>
-            <Box textAlign="center" fontFamily="alata" lineHeight="1.8">
+            <Box textAlign="center" fontFamily="alata" lineHeight="1.8" color={'white'}>
               <p style={{ color: "white" }}>Feel free to reach out to us at</p>
-              <Box fontWeight="bold" fontSize="1.2rem" color="white">
+              {/* <Box fontWeight="bold" fontSize="1.2rem" color="white">
                 <p>+91 82399 95529</p>
               </Box>
               <Box mt={4} fontSize="1rem">
@@ -296,7 +296,17 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                   PALASH SANGHI
                 </p>
                 <p style={{ color: "white" }}>~ Spree Convener</p>
-              </Box>
+              </Box> */}
+              <p style={{marginTop: "5%"}}>+91 70118 00150</p>
+                <p style={{ fontWeight: "bold"}}>Apurva Singh</p>
+                <p style={{marginTop: "5%"}}>+91 73406 23532</p>
+                <p style={{ fontWeight: "bold"}}>Archi</p>
+                <p style={{marginTop: "5%"}}>+91 93084 34822</p>
+                <p style={{ fontWeight: "bold"}}>Keshav Agrawal</p>
+                <p style={{marginTop: "5%"}}>+91 63587 59788</p>
+                <p style={{ fontWeight: "bold"}}>Sayantan</p>
+                <p style={{marginTop: "5%"}}>+91 77559 29460</p>
+                <p style={{ fontWeight: "bold"}}>Surya Bhay</p>
             </Box>
           </ModalBody>
 
