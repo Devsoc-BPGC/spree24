@@ -88,13 +88,13 @@ function VerticalNav() {
                 <p style={{marginTop: "5%"}}>+91 70118 00150</p>
                 <p style={{ fontWeight: "bold"}}>Apurva Singh</p>
                 <p style={{marginTop: "5%"}}>+91 73406 23532</p>
-                <p style={{ fontWeight: "bold"}}>Archi</p>
+                <p style={{ fontWeight: "bold"}}>Archi Jain</p>
                 <p style={{marginTop: "5%"}}>+91 93084 34822</p>
                 <p style={{ fontWeight: "bold"}}>Keshav Agrawal</p>
                 <p style={{marginTop: "5%"}}>+91 63587 59788</p>
-                <p style={{ fontWeight: "bold"}}>Sayantan</p>
+                <p style={{ fontWeight: "bold"}}>Sayantan Basu</p>
                 <p style={{marginTop: "5%"}}>+91 77559 29460</p>
-                <p style={{ fontWeight: "bold"}}>Surya Bhay</p>
+                <p style={{ fontWeight: "bold"}}>Suryansh Mathiyan</p>
             </Box>
           </ModalBody>
 
