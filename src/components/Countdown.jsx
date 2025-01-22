@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const Countdown = () => {
-  const eventDate = new Date("2025 March 28 00:00:00");
+  const eventDate = new Date("2025 March 26 00:00:00");
   const [date, setDate] = useState(new Date());
   useEffect(() => {
     const timer = setInterval(() => {

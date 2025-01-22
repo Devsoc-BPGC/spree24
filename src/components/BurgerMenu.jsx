@@ -299,14 +299,14 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
               </Box> */}
               <p style={{marginTop: "5%"}}>+91 70118 00150</p>
                 <p style={{ fontWeight: "bold"}}>Apurva Singh (Registrations)</p>
-                <p style={{marginTop: "5%"}}>+91 73406 23532</p>
+                {/* <p style={{marginTop: "5%"}}>+91 73406 23532</p>
                 <p style={{ fontWeight: "bold"}}>Archi Jain (Sponsorship)</p>
                 <p style={{marginTop: "5%"}}>+91 93084 34822</p>
                 <p style={{ fontWeight: "bold"}}>Keshav Agrawal (Finance)</p>
-                <p style={{marginTop: "5%"}}>+91 63587 59788</p>
+                <p style={{marginTop: "5%"}}>+91 63587 59788</p> */}
                 <p style={{ fontWeight: "bold"}}>Sayantan Basu (Events) </p>
                 <p style={{marginTop: "5%"}}>+91 77559 29460</p>
-                <p style={{ fontWeight: "bold"}}>Suryansh Mathiyan (Events) </p>
+                {/* <p style={{ fontWeight: "bold"}}>Suryansh Mathiyan (Events) </p> */}
             </Box>
           </ModalBody>
 
