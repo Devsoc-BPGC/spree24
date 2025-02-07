@@ -94,7 +94,7 @@ function HomePage() {
               <Show above="sm">
                 <Button
                   as={Link}
-                  to="/register"
+                  to="https://register.bits-spree.org"
                   fontSize="98.5%"
                   color="white"
                   border="3px solid white"
@@ -365,7 +365,7 @@ function HomePage() {
             <Show below="sm">
               <Button
                 as={Link}
-                to="/register"
+                to="https://register.bits-spree.org"
                 fontSize="0.75rem"
                 color="white"
                 border="3px solid white"
@@ -394,7 +394,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/register" element={<Register />} />
+        {/* <Route path="/register" element={<Register />} /> */}
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/sponsors" element={<Sponsors />} />

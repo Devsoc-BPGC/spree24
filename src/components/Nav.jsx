@@ -39,7 +39,7 @@ const Nav = () => {
               <Link to="/gallery">Gallery</Link>
             </DropdownMenuItem>
             <DropdownMenuItem className="flex justify-end text-xl  text-right">
-              <Link to="/register">Register</Link>
+              <Link to="https://register.bits-spree.org">Register</Link>
             </DropdownMenuItem>
             <DropdownMenuItem className="flex justify-end text-xl  text-right">
               <Link to="/aboutus">About Us</Link>
