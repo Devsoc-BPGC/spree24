@@ -9,11 +9,11 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import Player from "./assets/Player.png";
-import fireball from "./assets/fireball2.png";
+import spreeLogo from "./assets/spreeLogo.svg";
 import left from "./assets/Left Side.png";
 import right from "./assets/Right Side.png";
-import bg from "./assets/background.png";
-import phonebg from "./assets/phone_bg2.jpeg";
+import bg from "./assets/bg.png";
+import phonebg from "./assets/mobilebg.png";
 import insta from "./assets/insta.png";
 import { motion, AnimatePresence } from "framer-motion";
 import Countdown from "./components/Countdown";
@@ -25,7 +25,6 @@ import {
   Navigate,
   Link,
 } from "react-router-dom";
-import Register from "./pages/Register.jsx";
 import { useState } from "react";
 import VerticalNav from "./components/VerticalNav.jsx";
 import AboutUs from "./pages/Aboutus.jsx";
@@ -36,7 +35,6 @@ import Media from "./pages/Media.jsx";
 function HomePage() {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const handleRegister = () => {};
   return (
     <ChakraProvider>
       <Flex
@@ -74,8 +72,9 @@ function HomePage() {
         >
           <Flex width={"100%"} height={"15%"} justifyContent={"space-between"}>
             <motion.img
-              src={fireball}
-              style={{ margin: "1%", height: "50%" }}
+              src={spreeLogo}
+              draggable={false}
+              style={{ margin: "1%", height: "60%" }}
               initial={{ opacity: 0, rotate: -90, scale: 0 }}
               animate={{ opacity: 1, rotate: 0, scale: 1 }}
               transition={{ duration: 1.5 }}
@@ -106,7 +105,6 @@ function HomePage() {
                   marginLeft="-12rem"
                   borderRadius="9999px"
                   letterSpacing="0.3rem"
-                  onClick={handleRegister}
                 >
                   REGISTER
                 </Button>
@@ -135,7 +133,7 @@ function HomePage() {
                   }}
                 />
               )}
-            </AnimatePresence>
+              {/* </AnimatePresence>
             <motion.img
               src={Player}
               className="w-5/6 sm:w-2/3 md:w-1/2 lg:w-1/3 ml-[-55%] sm:ml-[-45%] md:ml-[-35%] lg:ml-[-25%]"
@@ -159,7 +157,7 @@ function HomePage() {
                     }
               }
             />
-            <AnimatePresence>
+            <AnimatePresence> */}
               {!isMenuOpen && (
                 <motion.img
                   src={right}
@@ -275,8 +273,7 @@ function HomePage() {
                         return (
                           <motion.span
                             key={index}
-                            className="text-xs sm:text-sm md:text-2xl lg:text-3xl"
-                            style={{ color: "white" }}
+                            className="text-xs sm:text-sm md:text-2xl lg:text-3xl text-orange-200"
                             variants={{
                               hidden: { opacity: 0, x: 10 },
                               exit: { opacity: 0, x: -10 },
@@ -375,7 +372,6 @@ function HomePage() {
                 marginBottom="2%"
                 borderRadius="9999px"
                 letterSpacing="0.3rem"
-                onClick={handleRegister}
               >
                 REGISTER
               </Button>

@@ -31,10 +31,10 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
 
   return (
     <>
-      <div className="fixed top-4 right-4 z-50">
+      <div className="fixed top-2 right-2 md:top-5 md:right-5 z-50">
         {/* Burger Icon */}
         <Button
-          className="fixed right-0 top-4 z-50 p-2 text-white bg-gray-800 rounded-md focus:outline-none"
+          className="fixed right-0 md:top-2 z-50 p-2 text-white bg-gray-800 rounded-md focus:outline-none"
           style={{ backgroundColor: "transparent", backgroundSize: "cover" }}
           onClick={toggleMenu}
           backgroundImage={navLogo}
