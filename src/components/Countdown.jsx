@@ -27,7 +27,7 @@ const Countdown = () => {
   return (
     // <Flex textAlign={"center"} flex={2}>
     <motion.div
-      className="justify-center sm:justify-start"
+      className="justify-center sm:justify-start text-orange-200"
       style={{ display: "flex", flex: 2, textAlign: "center" }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 4, duration: 1 } }}
