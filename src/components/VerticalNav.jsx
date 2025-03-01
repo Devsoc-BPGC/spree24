@@ -13,7 +13,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
 const VerticalText = ({ children }) => {
   return (
@@ -37,7 +37,7 @@ function VerticalNav() {
       <Flex
         style={{ transform: "rotate(180deg)" }}
         position={"absolute"}
-        marginTop={"7rem"}
+        marginTop={"10rem"}
         top={"0"}
         left={"0"}
         maxH={"65vh"}
@@ -56,11 +56,11 @@ function VerticalNav() {
           fontWeight={"800"}
         >
           <Link to="/media">
-            <VerticalText>Media Partner</VerticalText>
+            <VerticalText>Media Partner 24'</VerticalText>
           </Link>
-          <Link to="/sponsors">
-            <VerticalText>Sponsor</VerticalText>
-          </Link>
+          {/* <Link to="/sponsors">
+            <VerticalText>Sponsor 24'</VerticalText>
+          </Link> */}
           <VerticalText>Our Team</VerticalText>
           <Box as="button" onClick={onOpen}>
             <VerticalText>Contact Us</VerticalText>
