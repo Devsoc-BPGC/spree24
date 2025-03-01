@@ -8,7 +8,7 @@ import {
   Text,
   useMediaQuery,
 } from "@chakra-ui/react";
-import Player from "./assets/Player.png";
+// import Player from "./assets/Player.png";
 import spreeLogo from "./assets/spreeLogo.svg";
 import left from "./assets/Left Side.png";
 import right from "./assets/Right Side.png";
@@ -31,6 +31,7 @@ import AboutUs from "./pages/Aboutus.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import Sponsors from "./pages/Sponsors.jsx";
 import Media from "./pages/Media.jsx";
+import Events from "./pages/Events.jsx";
 
 function HomePage() {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
@@ -394,6 +395,7 @@ const App = () => {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/sponsors" element={<Sponsors />} />
+        <Route path="/events" element={<Events />} />
         <Route path="/media" element={<Media />} />
 
         <Route path="*" element={<Navigate to="/" />} />

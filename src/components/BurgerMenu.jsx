@@ -126,10 +126,10 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                   }}
                 >
                   <a
-                    href="#events"
+                    href="/events"
                     className="text-white-800 hover:text-white-600 relative"
                   >
-                    Events
+                    Events 25'
                     <span className="underline"></span>
                   </a>
                 </motion.li>
@@ -171,7 +171,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                     href="/sponsors"
                     className="text-white-800 hover:text-white-600 relative"
                   >
-                    Sponsors
+                    Sponsors 24'
                     <span className="underline"></span>
                   </a>
                 </motion.li>
@@ -196,7 +196,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                         href="/media"
                         className="text-white-800 hover:text-white-600 relative"
                       >
-                        Media Partner
+                        Media Partner 24'
                         <span className="underline"></span>
                       </a>
                     </motion.li>

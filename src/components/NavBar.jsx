@@ -43,7 +43,7 @@ const NavBar = () => {
           <DropdownMenuContent className="w-56 mr-2 font-Alata text-black text-right bg-transparent md:hidden rounded outline-none border-none ">
             <DropdownMenuGroup>
               <DropdownMenuItem className="flex">
-                <Link to="/">Media Partners</Link>
+                <Link to="/">Media Partners 24'</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="flex">
                 <Link to="/">Our Team</Link>
@@ -52,10 +52,10 @@ const NavBar = () => {
                 <Link to="/">About Us</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="flex">
-                <Link to="/">Rule Book</Link>
+                <Link to="/">Rule Book 25'</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="flex">
-                <Link to="/">Sponsors</Link>
+                <Link to="/">Sponsors 24'</Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>
           </DropdownMenuContent>

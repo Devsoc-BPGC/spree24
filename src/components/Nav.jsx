@@ -45,7 +45,7 @@ const Nav = () => {
               <Link to="/aboutus">About Us</Link>
             </DropdownMenuItem>
             <DropdownMenuItem className="flex justify-end text-xl  text-right">
-              <Link to="/media">Media Partners</Link>
+              <Link to="/media">Media Partners 24'</Link>
             </DropdownMenuItem>
           </DropdownMenuGroup>
         </DropdownMenuContent>
