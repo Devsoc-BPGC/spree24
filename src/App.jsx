@@ -381,6 +381,18 @@ function HomePage() {
           </Flex>
         </motion.div>
       </Flex>
+      <button
+        onClick={() => window.open("https://forms.gle/ES3ajWNEp3yWoWjp9")}
+        className={`absolute transform -translate-x-1/2 -translate-y-1/2 rounded-full  tracking-[0.3rem] text-[0.75rem] bg-black text-white hover:text-black hover:bg-white border-[3px] border-white 
+        ${
+          isLargerThan800
+            ? "py-2 px-12 bottom-10 left-1/2 font-bold"
+            : "bottom-[20%] left-1/2 px-4"
+        }`}
+      >
+        MERCH
+      </button>
+
       <Footer />
     </ChakraProvider>
   );
