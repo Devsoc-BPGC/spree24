@@ -88,13 +88,13 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              className="inset-y-0 right-0 w-1/3 h-4/5 p-1 flex justify-start items-center pt-12"
+              className="inset-y-0 right-0 w-1/3 h-4/5 p-1 flex justify-start items-center"
               initial={{ x: "100%" }}
               animate={{ x: 0, transition: { delay: 2, duration: 0.5 } }}
               exit={{ x: "100%", transition: { duration: 0.5, delay: 1 } }}
             >
               {/* Content */}
-              <ul className="space-y-5 sm:space-y-10 md:space-y-10 text-center p-4 text-xl sm:text-4xl md:text-4xl font-Inter text-white pt-12 font-bold">
+              <ul className="space-y-5 sm:space-y-10 md:space-y-7 text-center p-4 text-xl sm:text-4xl md:text-4xl font-Inter text-white font-bold">
                 <motion.li
                   initial={{ x: 20, opacity: 0 }}
                   exit={{ x: 20, opacity: 0, transition: { duration: 0.3 } }}
@@ -109,6 +109,23 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                     className="text-white-800 hover:text-white-600 relative"
                   >
                     About Us
+                    <span className="underline"></span>
+                  </a>
+                </motion.li>
+                <motion.li
+                  initial={{ x: 20, opacity: 0 }}
+                  exit={{ x: 20, opacity: 0, transition: { duration: 0.3 } }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                    transition: { duration: 1, delay: 2.5 },
+                  }}
+                >
+                  <a
+                    href="https://forms.gle/ES3ajWNEp3yWoWjp9"
+                    className="text-white-800 hover:text-white-600 relative"
+                  >
+                    Merch
                     <span className="underline"></span>
                   </a>
                 </motion.li>
@@ -200,7 +217,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                         <span className="underline"></span>
                       </a>
                     </motion.li>
-                    <motion.li
+                    {/* <motion.li
                       initial={{ opacity: 0, x: 20 }}
                       exit={{
                         x: 20,
@@ -220,8 +237,8 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                         Sponsor
                         <span className="underline"></span>
                       </a>
-                    </motion.li>
-                    <motion.li
+                    </motion.li> */}
+                    {/* <motion.li
                       initial={{ opacity: 0, x: 20 }}
                       exit={{
                         x: 20,
@@ -241,7 +258,7 @@ const BurgerMenu = ({ isMenuOpen, setMenuOpen }) => {
                         Our Team
                         <span className="underline"></span>
                       </a>
-                    </motion.li>
+                    </motion.li> */}
                     <motion.li
                       initial={{ opacity: 0, x: 20 }}
                       exit={{

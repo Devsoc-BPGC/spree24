@@ -381,7 +381,7 @@ function HomePage() {
           </Flex>
         </motion.div>
       </Flex>
-      <button
+      {/* <button
         onClick={() => window.open("https://forms.gle/ES3ajWNEp3yWoWjp9")}
         className={`absolute transform -translate-x-1/2 -translate-y-1/2 rounded-full  tracking-[0.3rem] text-[0.75rem] bg-black text-white hover:text-black hover:bg-white border-[3px] border-white 
         ${
@@ -391,7 +391,7 @@ function HomePage() {
         }`}
       >
         MERCH
-      </button>
+      </button> */}
 
       <Footer />
     </ChakraProvider>
