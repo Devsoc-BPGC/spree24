@@ -3,16 +3,16 @@ import { useEffect, useState } from "react";
 
 import adda52 from "../assets/sponsors/website/Adda52.png";
 import Anaconda from "../assets/sponsors/website/Anaconda.png";
-// import AuLogo from "../assets/sponsors/website/AuLogo.png";
+import AuLogo from "../assets/sponsors/website/AuLogo.png";
 import b8hxDcPQWP4Gh1u0XvvW from "../assets/sponsors/website/b8hxDcPQWP4Gh1u0XvvW.png";
-// import BSL from "../assets/sponsors/website/BSL.pdf";
+import BSL from "../assets/sponsors/website/BSL.png";
 import DLL from "../assets/sponsors/website/DLL.png";
 import FBL from "../assets/sponsors/website/FBL.png";
 import GOA from "../assets/sponsors/website/GOA.png";
 import KA_Vithub_logo from "../assets/sponsors/website/KA_Vithub_logo.png";
-import PBL from "../assets/sponsors/website/PBL.pdf";
+import PBL from "../assets/sponsors/website/PBL.png";
 import pp from "../assets/sponsors/website/pp.jpg";
-import Techno from "../assets/sponsors/website/Techno.pdf";
+import Techno from "../assets/sponsors/website/Techno.png";
 import a from "../assets/sponsors/website/a.jpeg";
 import b from "../assets/sponsors/website/b.jpeg";
 import c from "../assets/sponsors/website/c.jpeg";
@@ -35,24 +35,24 @@ let arr = [
     img: Anaconda,
     link: "",
   },
-  // {
-  //   title: "AuLogo",
-  //   dsgn: "",
-  //   img: AuLogo,
-  //   link: "",
-  // },
+  {
+    title: "AuLogo",
+    dsgn: "",
+    img: AuLogo,
+    link: "",
+  },
   {
     title: "b8hxDcPQWP4Gh1u0XvvW",
     dsgn: "",
     img: b8hxDcPQWP4Gh1u0XvvW,
     link: "",
   },
-  // {
-  //   title: "BSL",
-  //   dsgn: "",
-  //   img: BSL,
-  //   link: "",
-  // },
+  {
+    title: "BSL",
+    dsgn: "",
+    img: BSL,
+    link: "",
+  },
   {
     title: "DLL",
     dsgn: "",
@@ -78,9 +78,21 @@ let arr = [
     link: "",
   },
   {
+    title: "PBL",
+    dsgn: "",
+    img: PBL,
+    link: "",
+  },
+  {
     title: "pp",
     dsgn: "",
     img: pp,
+    link: "",
+  },
+  {
+    title: "Techno",
+    dsgn: "",
+    img: Techno,
     link: "",
   },
   {
