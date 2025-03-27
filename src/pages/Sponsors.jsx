@@ -1,221 +1,129 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import coke from "../assets/sponsors/coke.png";
-import junglee from "../assets/sponsors/junglee.jpeg";
-import blinkit from "../assets/sponsors/blinkit.svg";
-import himal from "../assets/sponsors/himal.jpg";
 
-import hipop from "../assets/sponsors/hipop.jpeg";
-import exce from "../assets/sponsors/exce.jpeg";
-import reak from "../assets/sponsors/reak.jpg";
-import prin from "../assets/sponsors/prin.jpeg";
-
-import peta from "../assets/sponsors/peta.svg";
-import safe from "../assets/sponsors/safe.png";
-import sbi from "../assets/sponsors/sbi.png";
-import taali from "../assets/sponsors/taali.png";
-import cosco from "../assets/sponsors/cosco.png";
-import tat from "../assets/sponsors/tat.jpeg";
-import tees from "../assets/sponsors/tees.png";
-import skippi from "../assets/sponsors/skippi.png";
-import mogu from "../assets/sponsors/mogu.png";
-import exceedd from "../assets/sponsors/exceedd.png";
-import oneplus from "../assets/sponsors/oneplus.png";
-import maxpro from "../assets/sponsors/maxpro.png";
-import ferr from "../assets/sponsors/ferr.png";
-import skechers from "../assets/sponsors/skechers.png";
-import icici from "../assets/sponsors/icici.png";
-import times from "../assets/sponsors/times.png";
-import spi from "../assets/sponsors/spi.png";
-import medial from "../assets/sponsors/medial.png";
-import trends from "../assets/sponsors/trends.png";
-import plum from "../assets/sponsors/plum.png";
-import kamat from "../assets/sponsors/kamat.png";
-import probox from "../assets/sponsors/probox.png";
-import oatey from "../assets/sponsors/oatey.jpeg";
+import adda52 from "../assets/sponsors/website/Adda52.png";
+import Anaconda from "../assets/sponsors/website/Anaconda.png";
+// import AuLogo from "../assets/sponsors/website/AuLogo.png";
+import b8hxDcPQWP4Gh1u0XvvW from "../assets/sponsors/website/b8hxDcPQWP4Gh1u0XvvW.png";
+// import BSL from "../assets/sponsors/website/BSL.pdf";
+import DLL from "../assets/sponsors/website/DLL.png";
+import FBL from "../assets/sponsors/website/FBL.png";
+import GOA from "../assets/sponsors/website/GOA.png";
+import KA_Vithub_logo from "../assets/sponsors/website/KA_Vithub_logo.png";
+import PBL from "../assets/sponsors/website/PBL.pdf";
+import pp from "../assets/sponsors/website/pp.jpg";
+import Techno from "../assets/sponsors/website/Techno.pdf";
+import a from "../assets/sponsors/website/a.jpeg";
+import b from "../assets/sponsors/website/b.jpeg";
+import c from "../assets/sponsors/website/c.jpeg";
+import d from "../assets/sponsors/website/d.jpeg";
+import e from "../assets/sponsors/website/e.jpeg";
+import f from "../assets/sponsors/website/f.jpeg";
+import g from "../assets/sponsors/website/g.jpeg";
 
 import Nav from "../components/Nav";
 let arr = [
   {
-    title: "Cosco",
-    dsgn: "Associater Prartner of Volleyball",
-    img: cosco,
-    link: "https://www.cosco.in/",
+    title: "adda52",
+    dsgn: "",
+    img: adda52,
+    link: "",
   },
   {
-    title: "Junglee Games",
-    dsgn: "Title Sponsor of EDM Night",
-    img: junglee,
-    link: "https://www.jungleegames.com/",
+    title: "Anaconda",
+    dsgn: "",
+    img: Anaconda,
+    link: "",
+  },
+  // {
+  //   title: "AuLogo",
+  //   dsgn: "",
+  //   img: AuLogo,
+  //   link: "",
+  // },
+  {
+    title: "b8hxDcPQWP4Gh1u0XvvW",
+    dsgn: "",
+    img: b8hxDcPQWP4Gh1u0XvvW,
+    link: "",
+  },
+  // {
+  //   title: "BSL",
+  //   dsgn: "",
+  //   img: BSL,
+  //   link: "",
+  // },
+  {
+    title: "DLL",
+    dsgn: "",
+    img: DLL,
+    link: "",
   },
   {
-    title: "Himalaya Wellness",
-    dsgn: "Festival Skin Care Partner",
-    img: himal,
-    link: "https://himalayawellness.in/",
+    title: "FBL",
+    dsgn: "",
+    img: FBL,
+    link: "",
   },
   {
-    title: "Safexpress",
-    dsgn: "Official Logistics Partner",
-    img: safe,
-    link: "https://www.safexpress.com/",
+    title: "GOA",
+    dsgn: "",
+    img: GOA,
+    link: "",
   },
   {
-    title: "Hipop",
-    dsgn: "Festival Partner",
-    img: hipop,
-    link: "https://drinkhipop.com",
+    title: "KA_Vithub_logo",
+    dsgn: "",
+    img: KA_Vithub_logo,
+    link: "",
   },
   {
-    title: "Teeshood",
-    dsgn: "Festival Partner",
-    img: tees,
-    link: "https://www.teeshood.com/",
+    title: "pp",
+    dsgn: "",
+    img: pp,
+    link: "",
   },
   {
-    title: "Peta",
-    dsgn: "Animal Welfare Partner",
-    img: peta,
-    link: "https://www.petaindia.com/",
+    title: "a",
+    dsgn: "",
+    img: a,
+    link: "",
   },
   {
-    title: "Taali",
-    dsgn: "Festival Snacking Partner",
-    img: taali,
-    link: "https://taalifoods.in/",
+    title: "b",
+    dsgn: "",
+    img: b,
+    link: "",
   },
   {
-    title: "Tattoo Tattva",
-    dsgn: "Festival Partner",
-    img: tat,
-    link: "https://www.instagram.com/tattoo_tattva?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    title: "c",
+    dsgn: "",
+    img: c,
+    link: "",
   },
   {
-    title: "Coca Cola",
-    dsgn: "Powered By",
-    img: coke,
-    link: "https://www.coca-colacompany.com/",
+    title: "d",
+    dsgn: "",
+    img: d,
+    link: "",
   },
   {
-    title: "SBI",
-    dsgn: "Associate Banking Partner",
-    img: sbi,
-    link: "https://www.onlinesbi.sbi/",
+    title: "e",
+    dsgn: "",
+    img: e,
+    link: "",
   },
   {
-    title: "Blinkit",
-    dsgn: "Official Instant Delivery Partner",
-    img: blinkit,
-    link: "https://blinkit.com/",
-  },
-
-  {
-    title: "Skippi",
-    dsgn: "Offical Ice Popsicle Partner",
-    img: skippi,
-    link: "https://skippi.in/",
+    title: "f",
+    dsgn: "",
+    img: f,
+    link: "",
   },
   {
-    title: "Mogu Mogu",
-    dsgn: "Official Juice Partner",
-    img: mogu,
-    link: "https://getmogumogo.com/",
-  },
-  {
-    title: "Exceedd",
-    dsgn: "Finance Partner",
-    img: exce,
-    link: null,
-  },
-  {
-    title: "Oneplus",
-    dsgn: "Title Sponsor of Bollywood Night",
-    img: oneplus,
-    link: "https://www.oneplus.in/",
-  },
-  {
-    title: "Max Protein",
-    dsgn: "Festival Protein Partner",
-    img: maxpro,
-    link: "https://maxprotein.in/",
-  },
-  {
-    title: "Ferrero",
-    dsgn: "Official Chocolate",
-    img: ferr,
-    link: "https://www.ferrero.com/int/en/",
-  },
-  {
-    title: "Skechers",
-    dsgn: "Official Fashion Partner",
-    img: skechers,
-    link: "https://www.skechers.in/",
-  },
-  {
-    title: "ICICI",
-    dsgn: "Festival Partner",
-    img: icici,
-    link: "https://www.icicibank.com/",
-  },
-  {
-    title: "Times Prime",
-    dsgn: "Official Subscriptions Partner",
-    img: times,
-    link: "https://www.timesprime.com/",
-  },
-  {
-    title: "Spiky Sips",
-    dsgn: "Festivals Refreshment Partner",
-    img: spi,
-    link: "https://spikysips.com/",
-  },
-  {
-    title: "Medial",
-    dsgn: "Social Networking Partner",
-    img: medial,
-    link: "https://mediatalapp.medium.com/introducing-medial-the-next-gen-professional-social-media-app-14dd6449f6cf",
-  },
-  {
-    title: "Reliance Trends",
-    dsgn: "Festival Partner",
-    img: trends,
-    link: "https://relianceretail.com/reliance-trends.html",
-  },
-  {
-    title: "Plum Goodness",
-    dsgn: "Skincare Partner",
-    img: plum,
-    link: "https://plumgoodness.com/",
-  },
-  {
-    title: "Kamat Realty",
-    dsgn: "Official Real Estate Partner",
-    img: kamat,
-    link: "https://kamatrealty.com/",
-  },
-  {
-    title: "Real",
-    dsgn: "Hydration Partner",
-    img: reak,
-    link: null,
-  },
-  {
-    title: "Princess",
-    dsgn: "Hydration Partner",
-    img: prin,
-    link: null,
-  },
-  {
-    title: "Protein Box",
-    dsgn: "Health Foods Partner",
-    img: probox,
-    link: "https://protein-box.com/",
-  },
-  {
-    title: "Oatey",
-    dsgn: "Sustainable Healthy Plant Based Milk Partner",
-    img: oatey,
-    link: "https://oatey.in/",
+    title: "g",
+    dsgn: "",
+    img: g,
+    link: "",
   },
 ];
 
